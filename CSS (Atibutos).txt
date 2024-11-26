@@ -1,0 +1,110 @@
+CSS (Atibutos)
+
+
+1. Cor e Fundo
+
+color: Define a cor do texto.
+
+background-color: Define a cor de fundo.
+
+background-image: Define uma imagem de fundo.
+
+background-size: Controla o tamanho do fundo.
+
+background-position: Define a posição do fundo.
+
+background-repeat: Controla a repetição do fundo.
+
+background-attachment: Define se o fundo é fixo ou rola com a página.
+
+2. Texto e Fontes
+
+font-family: Define a família de fontes.
+
+font-size: Define o tamanho da fonte.
+
+font-weight: Controla a espessura da fonte.
+
+font-style: Define o estilo (normal, itálico, etc.).
+
+text-align: Alinha o texto.
+
+text-decoration: Adiciona sublinhado, linha sobreposta, etc.
+
+letter-spacing: Controla o espaçamento entre letras.
+
+line-height: Define a altura das linhas.
+
+3. Box Model
+
+width: Largura do elemento.
+
+height: Altura do elemento.
+
+margin: Espaço externo ao redor do elemento.
+
+padding: Espaço interno do elemento.
+
+border: Define a borda.
+
+border-radius: Define os cantos arredondados.
+
+box-shadow: Adiciona sombra ao elemento.
+
+4. Layout
+
+display: Define o tipo de exibição (block, inline, flex, grid, etc.).
+
+position: Define a posição (relative, absolute, fixed, sticky).
+
+top, right, bottom, left: Controlam a posição em relação ao elemento pai.
+
+overflow: Define como o conteúdo excedente é tratado.
+
+z-index: Define a ordem de empilhamento.
+
+5. Flexbox e Grid
+
+Flexbox
+
+display: flex: Ativa o flexbox.
+
+flex-direction: Define a direção dos itens.
+
+justify-content: Alinha os itens no eixo principal.
+
+align-items: Alinha os itens no eixo cruzado.
+
+flex-wrap: Define se os itens devem quebrar a linha.
+
+Grid
+
+display: grid: Ativa o grid.
+
+grid-template-columns: Define as colunas.
+
+grid-template-rows: Define as linhas.
+
+gap: Define o espaço entre linhas/colunas.
+
+6. Animações e Transições
+
+transition: Define a transição entre estados.
+
+animation: Define animações.
+
+keyframes: Define os passos de uma animação.
+
+transform: Aplica transformações (escala, rotação, etc.).
+
+7. Outros Atributos Importantes
+
+visibility: Controla a visibilidade (visible, hidden).
+
+opacity: Define a opacidade.
+
+cursor: Define o tipo de cursor.
+
+clip-path: Define formas de recorte.
+
+filter: Aplica efeitos como blur, brilho, etc.

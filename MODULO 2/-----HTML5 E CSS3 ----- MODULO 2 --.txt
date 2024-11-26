@@ -1,0 +1,901 @@
+-----HTML5 E CSS3 ----- MODULO 2 ---------------
+
+
+*** PSICOLOGIA DAS CORES ***
+
+A Psicologia das Cores é um estudo que busca compreender o comportamento humano em relação às cores. 
+De acordo com algumas pesquisas, 93% dos consumidores consideram que a aparência visual é o fator que mais contribui para a decisão final de compra. “A cor representa 85% da razão pela qual você comprou um produto específico”, segundo Neil Patel do Quick Sprout.
+
+
+
+
+*** REPRESENTAÇÃO DAS CORES NO CSS3 ***
+
+<!--REPRESENTAÇÃO POR NOMES-->
+
+	<h2 style="background-color: blue; color: white ;">Exemplo de Cores</h2>
+
+<!--REPRESENTAÇÃO POR CÓDIGOS HEXADECIMAIS-->
+
+	-Hexadecimal: 0 1 2 3 4 5 6 7 8 9 A B C D E F -
+
+	<h2 style="background-color: #0000ff; color: #ffffff;">Exemplo de Cores</h2>
+
+
+<!--REPRESENTAÇÃO POR CÓDIGO RGB-->
+
+  	 <h2 style="background-color: rgb(0, 0, 255); color: rgb(255, 255, 255);">Exemplo de Cores</h2>
+
+<!--REPRESENTAÇÃO POR CARACTERISTICAS DE CORES -->
+
+   	<h2 style="background-color: hsl(hue, saturation, lightness);
+
+hue == Matiz
+saturation == saturação 
+lightness == luminosidade
+
+	<h2 style="background-color: hsl(240, 100%, 50%); color: hsl(0, 0%, 100%);">Exemplo de Cores</h2
+	
+	** ADICIONANDO TRANPARÊNCIA **
+
+Para conseguirmos mais possibilidades, devemos recorrer aos códigos hexadecimais ou então às funções CSS rgb(), rgba(), hsl() ou hsla().
+
+
+
+*** HARMONIA DAS CORES ***
+
+
+*** O círculo cromático ***
+
+Analisando atentamente o círculo cromático, percebemos as três cores primárias, que estão destacadas com o texto mais escuro: amarelo, vermelho e azul.
+
+Da junção das cores primárias, temos as três cores secundárias, que são o laranja (amarelo+vermelho), o violeta/roxo (azul+vermelho) e o verde (azul+amarelo).
+
+Da junção de uma cor primária com uma secundária, temos as seis cores terciárias:
+
+‣ Amarelo-esverdeado (amarelo+verde)
+‣ Amarelo-alaranjado (amarelo+laranja)
+‣ Vermelho-alaranjado (vermelho+laranja)
+‣ Vermelho-arroxeado (vermelho+roxo)
+‣ Azul-arroxeado (azul+roxo)
+‣ Azul-esverdeado (azul+verde)
+
+
+** Temperatura e Harmonia **
+
+Olhando o círculo cromático, também conseguimos classificar as cores por sua temperatura. Dá só uma olhada na imagem a seguir:
+
+As cores quentes, criam uma sensação de calor e proximidade. Já as cores frias, estão associadas a sensações mais calmas, de frescor e tranquilidade.
+
+Além da classificação por temperatura, podemos classificar as cores por esquemas harmônicos.
+
+------- Cores complementares ----------
+
+São aquelas que apresentam o maior contraste entre si. Elas estão localizadas do lado imediatamente oposto do círculo cromático.
+Se pegarmos qualquer cor primária, a sua cor complementar é sempre uma cor secundária. De forma similar, qualquer cor terciária tem uma outra cor terciária como complementar. Quando juntamos duas cores complementares, sempre obtemos o cinza.
+
+----------- Cores análogas ------------
+
+Diferente das cores complementares, que estão do lado extremo oposto no círculo cromático, as cores análogas são aquelas que são imediatamente vizinhas entre si.
+Por serem cores consecutivas, as cores análogas possuem um baixo contraste entre elas, mas criam uma bela harmonia quando combinadas em um mesmo design.
+
+
+----------- Cores análogas mais uma complementar ------------- 
+
+Dá pra notar que essa aqui é uma combinação dos dois tipos anteriores, não é?
+Essa técnica quebra um pouco o ritmo semelhante das cores análogas, adicionando uma cor que cria um grande contraste com as três análogas.
+
+
+
+------------ Cores análogas relacionadas -------------
+
+Nesse tipo de harmonia, escolhemos duas cores análogas (consecutivas) e depois pulamos uma terceira cor (em qualquer direção) e escolhemos a quarta.
+Com essa técnica, conseguimos um resultado parecido com o das cores análogas simples, mas com um pouco mais de contraste sem ter que escolher uma cor complementar.
+
+
+---------- Cores intercaladas --------------
+
+Um tipo menos usado de harmonia, já que às vezes não funciona tão bem assim. Vamos escolher a primeira cor e depois mais duas com intervalo constante entre elas.
+Na imagem ao lado, criei um exemplo onde o intervalo é constante entre as cores  elecionados.
+
+------------ Cores triádicas ------------------
+ 
+Técnica bastante utilizada e que garante uma grande riqueza de cores, onde escolhemos três pontos equidistantes no círculo cromático. Esse esquema gera sempre um triângulo equilátero e cria uma opção que sempre possui um ótimo contraste entre as cores.
+
+--------  Cores em quadrado ----------- 
+
+Bastante semelhante ao esquema triádico, mas permite selecionar quatro cores com um contraste razoável entre as cores escolhidas. Esse esquema gera sempre um quadrado perfeito com os pontos selecionados.
+
+--------- Cores tetrádicas ----------------
+
+Com essa técnica, vamos escolher dois pares de cores complementares, que não serão necessariamente análogas ou consecutivas. Isso vai nos garantir dois pares de cores, com
+bastante contraste entre si.
+
+---------- Monocromia ----------
+
+Uma harmonia bem diferente das anteriores, que usa apenas uma cor e varia apenas a sua saturação e o seu brilho. Essa combinação geralmente gera pouquíssimo contraste entre as
+cores escolhidas, mas acaba gerando um resultado visual bem agradável aos olhos, conhecido como “degradê”.
+
+Geralmente uma paleta de cores tem de 3 a 5 cores no máximo, uma media de 4 é o recomendado, preto e branco não estão inclusas 
+
+Outra maneira de definir uma paleta de cores: 
+
+se o cliente tem uma logo e essa marca é algo muito importante, devemos verificar a cor primaria da marca do cliente. 
+Normalmente essa cor primaria vai ser usado no site. 
+
+
+
+********** COMO CRIAR DEGRADÊ COM CSS *******
+
+No CSS, existem dois tipos principais de gradientes que você pode usar para criar transições suaves entre cores:
+
+----Gradiente Linear (linear-gradient)
+ 
+ 	background: linear-gradient([direção], [cor1], [cor2], ...);
+
+----Gradiente Radial (radial-gradient)
+
+	background: radial-gradient([forma] [tamanho] [posição], [cor1], [cor2], ...);
+
+	forma: pode ser circle (círculo) ou ellipse (elipse).
+
+	tamanho: pode ser closest-side, closest-corner, farthest-side, farthest-corner, ou um valor específico.
+
+	posição: onde o gradiente começa (por padrão, é o centro, mas pode ser ajustado).
+
+
+----Gradiente Cônico (conic-gradient)
+	É um tipo mais novo de gradiente, onde as cores transicionam em torno de um ponto central, como se estivesse girando em um círculo. Isso cria um efeito de "setas" ou segmentos de uma pizza.
+
+	background: conic-gradient([cor1] [ângulo1], [cor2] [ângulo2], ...);
+
+
+
+ *********** TIPOGRAFIA ***********
+
+E o mundo da tipografia se inicia em 1450, com o inventor Alemão Johannes Gutenberg (foto ao lado), criador da prensa mecânica de tipos móveis.
+A tipografia surgiu a partir da ideia de melhoras a visibilidade, a legibilidade das letras 
+
+Tipo == týpos 
+Grafia == graphía
+
+Como vou escrever coisas no papel 
+
+Em design as pessoas pensão em juntar 3 coisas: 
+
+--Boas imagens 
+--Boas cores 
+--Boas letras
+
+As letras passam emoções assim como as cores. 
+No capítulo anterior nós falamos sobre a importância de escolher uma boa paleta de
+cores para o nosso projeto. Também precisamos saber escolher as famílias tipográficas que utilizaremos em um site. As fontes também podem passar emoções.
+
+Mesmo que todas as palavras tenham uma legibilidade
+razoável (até dá pra entender), a leiturabilidade não é tão boa assim. Essa segunda
+característica diz respeito à fluidez que conseguimos ter na leitura.
+
+Sendo assim, escolher um bom tipo é essencial para cada caso. Não povoar nosso site
+com tipos diferentes também é uma ótima ideia. No máximo dois ou três tipos já
+estaria ótimo.
+
+
+***Anatomia do Tipo***
+
+É como vai desenhar cada letra. 
+
+A letra X é o ponto de partida para a construção de todas a Fontes  (x minúsculos )
+ela vai definis qual a altura base de todas as letras minúsculas dessa fonte ( sem seus ascendentes e descendentes) 
+
+
+A - Altura das maiúsculas: Altura que as letras maiúsculas vão ocupar. Geralmente
+um pouco menor que a soma da ascendente com a mediana (< B + D)
+
+B - Ascendente: Parte das letras maiúsculas que se ergue acima da linha mediana
+
+C - Descendente: Parte das letras minúsculas que passa por baixo da linha de base.
+
+D - Altura-X: Também chamada de mediana, define o tamanho das letras minúsculas. Tem esse nome, pois se baseia no tamanho da letra x minúscula.
+
+E - Corpo: É a soma de quatro medidas: ascendente + altura-x + descendente +
+espaço de reserva. É o tamanho total da letra. É o valor que escolhemos ao configurar o tamanho da fonte em um texto.
+
+1 - Arco: presente em letras minúsculas. Uma linha curva que nasce em na haste
+principal.
+
+2 - Barriga: curva em uma letra maiúscula ou minúscula, fechada, ligada à haste
+vertical em dois pontos.
+
+3 - Braço: traço horizontal ou inclinado, ligado à haste vertical principal de uma letra maiúscula ou minúscula.
+
+4 - Cauda: apêndice do corpo de algumas letras (g, j, J, K, Q, R), que fica abaixo da linha base.
+
+5 - Enlace: a forma como uma haste, linha ou filete se liga a um arremate, a uma
+serifa ou a um terminal. Pode ser angular ou curvilíneo.
+
+6 - Espinha: curva e contracurva estrutural da letra S.
+
+7 - Esporão: uma projeção que encontramos nas letras b e G.
+
+8 - Filete: haste horizontal ou inclinada, fechada nas duas extremidades, por duas hastes ou por uma curva.
+
+9 - Haste: traço principal de uma letra, geralmente vertical.
+
+10 - Olho: espaço em branco, fechado, dentro de uma letra.
+
+11 - Orelha: apêndice presente na letra g, que pode ser em gota, botão,
+bandeira ou gancho.
+
+12 - Pé: terminal ou serifa horizontal que arremata uma perna na parte de
+baixo.
+
+13 - Perna: haste vertical ou inclinada com um extremidade livre (ou com
+um pé) e outra extremidade ligada ao corpo da letra.
+
+14 - Serifa: também chamada de apoio ou patilha. Pequenas retas que
+ornamentam as hastes de alguns tipos.
+
+15 - Terminal: forma que arremata a extremidade de uma linha curva de
+uma letra.
+
+16 - Vértice: também chamada de ápice. Formada pela convergência de
+duas hastes que se encontram. Pode ser pontiagudo, oblíquo, plano ou
+redondo.
+
+
+É a altura do corpo que se configura nas CSS
+
+O nosso cérebro não lê letra por letra, basta que a primeira e a ultima estejam no lugar certo. 
+
+
+****Fonte, letra e família ***
+
+----Glifos, letras, caracteres----
+
+São os signos alfabéticos projetados para reprodução mecânica. O exemplo a seguir
+representa os glifos de a até h.
+
+abcdefgh
+
+--Família tipográca--
+
+É o conjunto de glifos que possuem as mesmas características anatômicas,
+independente das suas variações.
+
+Vou exemplificar esse conceito com o exemplo a seguir: a família tipográfica Open
+Sans possui várias configurações de peso (de 300 a 800). Mesmo parecendo
+representações bem diferentes, todos eles fazem parte da mesma família tipográfica.
+
+
+---Fontes--
+
+As fontes são conjuntos de glifos que formam uma família tipográfica. O termo fonte
+também é aplicável ao arquivo digital que armazena todos os formatos de glifos que
+compõem uma determinada família tipográfica.
+
+
+
+***** CATEGORIA DE FONTES ****
+
+Elas são baseadas principalmente na presença ou ausência da serifa.. As demais categorias, acabam derivando das duas principais (com e sem serifa) ou não se encaixam nessas características e por isso geram novas categorias. 
+
+---- Fontes Serifadas ----
+
+Esta é a categoria mais clássica de fontes, surgida lá na época das prensas que eu
+citei no início do capítulo. Tipicamente, os caracteres serifados sempre foram
+aplicados em grandes blocos de textos impressos em papel e se aproveitam de uma
+característica da nossa percepção: nós nunca lemos as palavras letra por letra, e sim por um conjunto. As serifas têm a capacidade de guiar nossos olhos graças aos
+pequenos prolongamentos que elas criam e fazem as letras “se juntarem” em
+palavras.
+
+Atualmente, não usamos fontes serifadas para apresentar textos longos na Web pois
+as tendências atuais nos levam a usar fontes um pouco mais leves visualmente.
+Porém, as fontes serifadas são bastante usadas em títulos, pois acabam chamando
+mais atenção por conta das características que citei.
+
+
+---- Fontes não serifadas --- (sans-serif)
+
+Mais conhecidas por seu “nome chique” em Francês sans-serif (significa “sem serifa”), são fontes que, como você já pode imaginar, não apresentam serifas. As primeiras fontes dessa categoria surgiram em 1816, mas foram consideradas avançadas demais para a época. Anos depois, ressurgiram em versão melhorada e vieram pra ficar, principalmente para a Web. Isso acontece porque elas são ótimas para a exibição em telas/monitores pois transmitem a sensação de limpeza, clareza e organização.
+
+
+---- Fonte monoespaçadas --- 
+
+Essa é uma das categorias de fontes que vieram derivadas das duas categorias que
+vimos anteriormente, por isso existem fontes monoespaçadas com e sem serifas. A
+principal diferença desse tipo de fonte é o espaço horizontal (largura) ocupado por
+cada letra. Na maioria das fontes, a letra i ocupa muito menos espaço lateral do que a letra M, não é? Não para as fontes monoespaçadas. Elas possuem a mesma largura para todas as letras.
+
+A principal vantagem no uso desse tipo de fonte é facilitar ao máximo a leitura das
+palavras, principalmente aquelas que requerem que você as reproduza. Usamos muito
+esse tipo de fonte para representar comandos de linguagens de programação de computadores. Por isso, nós também costumamos chamá-las de fonte de terminal ou  fonte de console. 
+
+---- Fontes Script ----
+
+Também chamadas de fontes handwriting, são aquelas que tentam imitar a escrita
+humana. Seu uso deve ser bem controlado e jamais será aplicado a textos muito
+longos, pois causam cansaço visual e tornam-se difíceis de ler, como já provamos
+anteriormente no início do capítulo, dentro do item “As fontes falam”.
+
+
+---- Fontes Display ----
+
+Toda fonte que foge completamente das definições feitas pelas classificações acima
+são consideradas fontes display. São fontes com bastante efeitos visuais, enfeitadas e até mesmo curiosas. Também são chamadas de fontes comemorativas e algumas delas sequer representam letras, podendo ser desenhos de animais, objetos, pessoas, personagens de quadrinhos, etc.
+
+Essas fontes também são recomendadas para criar títulos em destaque e devem ser
+evitadas para textos médios ou longos.
+
+
+----- COMO COLOCAR ISSO NA PRÁTICA -----
+
+Para configurar a família tipográfica que será aplicada a um determinado texto,
+usamos a propriedade font-family das CSS. Se indicarmos mais de uma família na
+sequência, estamos indicando ao navegador que dê preferência para a primeira. Caso
+ela não seja encontrada, tente a próxima. E essa estratégia se seguirá até a última, que geralmente é a família genérica serif, sans-serif ou monospaced.
+
+
+font-family: Arial, Helvetica, sans-serif;
+
+1 Fontes específicas: Você pode especificar fontes como "Arial", "Times New Roman", ou qualquer outra fonte instalada no sistema do usuário ou incorporada via CSS.
+
+2 Fontes genéricas: Se as fontes específicas não estiverem disponíveis, você pode fornecer uma "fonte genérica", como serif, sans-serif, monospace, cursive, fantasy, ou system-ui, que são grupos de fontes semelhantes.
+
+--Fontes com vários nomes---
+
+Se o nome da fonte for composto por várias palavras (por exemplo, "Times New Roman" ou "Open Sans"), você deve envolvê-lo em aspas duplas (ou simples).
+
+body {
+  font-family: "Open Sans", "Arial", sans-serif;
+}
+
+
+----- Melhores fontes seguras para HTML e CSS -----
+
+As seguintes fontes são as melhores fontes seguras para HTML e CSS:
+
+Arial (sem serifa)
+Verdana (sem serifa)
+Tahoma (sem serifa)
+Trebuchet MS (sem serifa)
+Times New Roman (serifa)
+Geórgia (serifa)
+Garamond (serif)
+Courier New (monoespaço)
+Brush Script MT (cursiva)
+
+
+-------- TAMANHO DAS FONTES -------
+
+Medidas absolutas
+
+existem várias medidas como cm (centímetros), in (polegadas), pt (pontos), pc (paicas), px (pixels), etc. 
+
+
+Medidas relativas 
+
+
+em (altura M) 
+
+Descrição: A unidade em é relativa ao tamanho da fonte do elemento pai. Ou seja, se o elemento pai tiver um tamanho de fonte de 16px, então 1em será igual a 16px. A unidade em é útil para tornar o design mais flexível e relativo.
+
+
+ex (x-height)
+
+Descrição: A unidade ex é baseada na altura da letra "x" minúscula da fonte. Essa unidade pode ser útil para dimensionar elementos com base na altura do corpo das letras.
+
+
+rem (root em)
+
+Descrição: A unidade rem é semelhante à unidade em, mas relativa ao tamanho da fonte do elemento raiz (tipicamente, o elemento <html>). Se o tamanho de fonte do <html> for 16px, então 1rem será sempre 16px, independentemente de onde a unidade rem é usada.
+
+
+vw (View Width)
+
+Descrição: O vw é uma unidade relativa à largura da janela de visualização (viewport). Um 1vw é igual a 1% da largura da janela. Isso torna o tamanho da fonte responsivo ao tamanho da tela.
+
+
+vh (View Height)
+
+Descrição: O vh é semelhante ao vw, mas é relativo à altura da janela de visualização (viewport). Um 1vh é igual a 1% da altura da janela.
+
+% (Porcentagem)
+
+Descrição: A unidade % é semelhante ao em, mas é relativa ao tamanho da fonte do elemento pai. Se o pai tiver uma fonte de 16px, então 100% será 16px, 150% será 24px, e assim por diante.
+
+
+Para tamanhos de fonte a serem exibidos na tela, o W3C recomenda o uso do px ou do em.
+
+
+QUAL UNIDADE ESCOLHER ?
+
+px: Usado para controle preciso, mas não é flexível.
+
+em / rem: Ideal para designs escaláveis e responsivos. rem é mais previsível do que em porque é sempre relativo ao tamanho da fonte do elemento raiz (html).
+
+vw / vh: Ótimo para criar layouts responsivos, onde o tamanho da fonte se adapta ao tamanho da janela.
+
+%: Útil para tornar o texto mais flexível em relação ao tamanho do elemento pai.
+
+pt: Usado mais para impressão e menos para design web.
+
+ch / ex: Usados em casos específicos onde você precisa de medidas baseadas em caracteres ou altura de letras.
+
+Em geral, para design web moderno, as unidades rem, em, vw e vh são as mais recomendadas, pois oferecem flexibilidade e escalabilidade.
+
+
+ --- Outros estilos --- 
+
+Existem outras formatações muito usadas em CSS, que são as propriedades font-style para aplicar o itálico e font-weight para aplicar o negrito
+
+font-style: italic; 
+
+Descrição: Exibe o texto em itálico. O estilo itálico pode ser um tipo de fonte projetada especificamente para esse fim ou, caso a fonte não tenha uma variante em itálico, o navegador pode tentar fazer uma inclinação no texto.
+
+font-style: oblique;
+
+Descrição: Exibe o texto de maneira inclinada, mas com um efeito menos acentuado do que o estilo itálico. Em alguns casos, o oblique pode ser um efeito artificial criado pelo navegador, inclinando a fonte normal.
+
+font-style: normal;
+
+Descrição: A fonte é exibida no estilo padrão, sem nenhum tipo de inclinação ou transformação.
+
+
+
+ ---- font-weight ----
+
+O atributo CSS font-weight controla a espessura do texto em um elemento. Ele pode ser usado para enfatizar ou ajustar a aparência do texto, e aceita tanto palavras-chave quanto valores numéricos. Aqui está um resumo das opções:
+
+Palavras-chave mais comuns
+
+normal: Define o peso padrão do texto (geralmente equivalente a 400).
+bold: Define o texto em negrito (geralmente equivalente a 700).
+lighter: Define um peso menor em relação ao elemento pai.
+bolder: Define um peso maior em relação ao elemento pai.
+
+Valores numéricos
+
+Os valores variam de 100 a 900, onde:
+
+100: Mais fino.
+400: Peso normal (padrão).
+700: Negrito.
+900: O peso mais pesado disponível.
+
+
+----- SHORTHAND ------
+
+As formatações de fontes são tão importantes e tão usadas em CSS, que existem
+“atalhos” para usá-las. São as chamadas shorthands.
+Existe uma shorthand para fontes que é a propriedade font. No lugar de fazer várias
+configurações em múltiplas linhas, podemos simplificar tudo de maneira muito
+simples.
+
+A ordem dos atributos de uma shorthand em CSS é importante. No caso da
+propriedade font, devemos informar, na ordem:
+
+• font-style
+• font-variant
+• font-weight
+• font-size/line-height
+• font-family
+
+	 font: italic bolder 3em 'Work Sans', sans-serif;
+
+
+
+**** USANDO O GOOGLE FONTES ****
+
+não adianta querer alterar as características das fontes se elas não permitirem tais mudanças.
+
+
+--- importando direto no css ---
+
+1- escolha a fonte desejada
+2- click em Obter código de importação 
+3- @import
+4- copiar o @import que está dentro da tag style
+
+@import url('https://fonts.googleapis.com/css2?mily=Kaushan+Script&display=swap');
+
+
+	<style>
+        	@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
+
+        	@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+        	body{
+            		font-family: 'Work Sans', Arial, Helvetica, sans-serif;
+            		font-size: 1em;
+            		color: #000000;
+        	}
+
+        	h1 {
+           		 font-family: 'Kaushan Script', Times, serif;
+            		font-size: 3em;
+        	}
+   	 </style>
+
+
+tudo que for iniciado com @ no css deve ser colocado ou logo abaixo a tag style ou nas primeiras linhas de um documento css e fora de um seletor 
+
+
+--- importando no HTML --- 
+
+Inclua o link da fonte no <head> do seu HTML:
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Importando Fontes</title>
+
+  <!-- Importando uma fonte do Google Fonts -->
+
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+  <style>
+
+    body {
+      font-family: 'Roboto', sans-serif;
+    }
+
+  </style>
+
+</head>
+
+
+
+**** USANDO O FONTES EXTERNAS ****
+
+Quando for usar uma fonte externa ficar atenta se a mesma tem todos os glifos.
+
+Colocamos os arquivos dentro de uma pasta fonte e usamos as seguintes configurações 
+
+@font-face {
+            font-family: 'Love';
+            src: url('Lovely Valentine.otf') format(opentype), url('Lovely Valentine.ttf') format(truetype);
+            font-weight: normal;
+            font-style: normal;
+        }
+
+
+ tipos de format()
+
+           - opentype (otf)
+           - truetype (ttf)
+           - embedded-opentype
+           - truetype-aat (apple advenced typography)
+           - svg
+        
+
+
+<style>
+        @font-face {
+            font-family: 'Love';
+            src: url('Lovely Valentine.otf') format(opentype), url('Lovely Valentine.ttf') format(truetype);
+            font-weight: normal;
+            font-style: normal;
+        }
+        
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        h1 {
+            font-family:  'Love', 'Times New Roman', Times, serif;
+            font-size: 3em;
+        }
+    </style>
+
+
+
+**** ALINHAMENTO ****
+
+Existem quatro tipos de alinhamento de textos:
+
+text-align: left;  Alinha o texto à esquerda (padrão para idiomas como português e inglês).
+
+text-align: right; Alinha o texto à direita.
+
+text-align: center; Centraliza o texto.
+
+text-align: justify; Justifica o texto, alinhando tanto à esquerda quanto à direita, ajustando o espaçamento entre as palavras. 
+
+text-align: start; Alinha o texto ao início da direção de escrita (esquerda para idiomas LTR, como português, e direita para RTL, como árabe).
+
+text-align: end; Alinha o texto ao final da direção de escrita.
+
+
+--- text-indent ---
+
+A propriedade CSS text-indent é usada para definir o tamanho do recuo (ou indentação) na primeira linha de um parágrafo ou bloco de texto.
+
+
+-----------------------------------------------------------------------------------
+
+
+SELETORES PERSONALIZADOS 
+
+Para começar a dar mais poder às CSS, criando estilos personalizados, precisamos aprender a utilizar os seletores de id (#) e de class (.) de maneira eficiente. Ao criar nosso conteúdo em HTML, podemos identificar um determinado elemento único
+com um id, ou agrupar elementos múltiplos que tenham características semelhantes com um class. 
+
+Um id vai identificar um elemento único dentro da página atual. Essa identificação vai nos permitir criar um estilo especial para um elemento isolado. Já um class vai identificar uma classe à qual um ou mais elementos pertençam, compartilhando características em comum a todos os que façam parte desse grupo.
+
+tudo que em HTML é id  em CSS é #
+tudo que em HTML é class em CSS é .
+
+-- id com CSS -- 
+
+Só se pode ter um id="principal" por HTML, não se pode repetir id 
+
+<h1 id="principal">Título</h1>
+
+#principal {
+
+}
+
+-- class com CSS -- 
+
+posso aplicar mais de uma classe em um elemento 
+
+<h1 class="principal">Título</h1>
+
+.principal {
+
+}
+
+-------------------------------------------------------------------------------
+
+PSEUDO-CLASSES E PSEUDO-ELEMENTOS
+
+---PSEUDO-CLASSES ---
+
+Uma pseudo-classe CSS é uma palavra-chave adicionada às declarações de um seletor
+após um sinal de dois pontos e especificam um estado especial de um elemento.
+Existem várias pseudo-classes para estilos, podemos citar.
+
+ :hover – Aplica o estilo quando o usuário passa o mouse sobre um elemento.
+
+ :visited - é usada para estilizar links que o usuário já visitou. Ela permite aplicar um estilo específico a links que foram clicados anteriormente e visitados. Essa pseudo-classe é comumente usada para mudar a cor de um link depois que o usuário o visitou.
+
+ :active  – Aplica o estilo quando um elemento, como um botão ou link, está sendo ativado (pressionado).
+
+ :checked  – Aplica o estilo a elementos que estão marcados, como caixas de seleção ou botões de rádio.
+
+ :empty - é usada para selecionar elementos que não contêm nenhum conteúdo ou elementos que não tenham filhos (nem texto, nem outros elementos). Ou seja, ela aplica um estilo a um elemento que está "vazio" em relação ao seu conteúdo visível.
+
+ :focus – Aplica o estilo quando um elemento, como um campo de entrada, ganha foco.
+
+
+---- PSEUDO-ELEMENTOS -----
+
+
+:nth-child() – Seleciona um ou mais elementos com base em sua posição na árvore DOM. Pode ser usado com valores específicos ou expressões matemáticas.
+
+:first-child – Aplica o estilo ao primeiro filho de um elemento pai.
+
+:last-child – Aplica o estilo ao último filho de um elemento pai.
+
+:not() – Aplica o estilo a todos os elementos que não correspondem a um seletor específico.
+
+:disabled – Aplica o estilo a elementos desativados, como campos de formulário.
+
+:before e :after – Permite adicionar conteúdo antes ou depois de um elemento. Usados para criar efeitos visuais sem adicionar elementos HTML extras.
+
+
+
+
+
+EXEMPLO DE HOVER (PSEUDO-CLASSES)
+
+<title>Exemplo de Hover</title>
+
+ <style>
+    body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        a {
+            color: red;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        a:visited {
+            color: darkred;
+        }
+
+        a:hover{
+            color: black;
+            text-decoration: underline;
+        }
+
+        a:active{
+            color: yellow;
+        }
+
+        .especial {
+            background-color:rgb(211, 120, 120);
+         }
+
+        .especial::before{
+            content: '-->';
+        }
+
+        .especial::after{
+            content: '<--';
+        }
+    </style>
+
+
+
+   /* # == id
+           . == classe
+           : == pseudo-classes
+          :: == pseudo-elementos 
+           > == clildren (filho)
+           */
+
+
+
+----------------------------------------------------------------------------------
+
+
+-------- MODELO DE CAIXA --------
+
+De forma simples e objetiva, baseado em um conceito chamado “box model”, a grande maioria dos elementos HTML que temos no nosso site são como caixas. Elas são containers que armazenam conteúdos ou até mesmo outras caixas. Pode ocorrer de ter caixas uma dentro da outra e esse termo recebe o nome de aninhamento.
+
+
+Tudo começa a partir do conteúdo (content). Por padrão, toda caixa é composta apenas pelo conteúdo e não possui padding, nem border, nem outline e nem margin. Uma exceção curiosa é o elemento <body> que já vem com uma margin de 8px
+
+Todo conteúdo possui uma largura (width) e uma altura (height) e a esse conjunto
+de propriedades, damos o nome de box-size (tamanho da caixa). O tamanho da
+caixa não inclui as medidas de padding, border, outline e margin.
+
+Depois do conteúdo e de seu tamanho, vamos nos focar na borda que fica em volta
+dele. Ela pode ter uma espessura, uma cor e um formato.
+ 
+Entre a borda e o conteúdo - da borda para dentro - temos o preenchimento (padding) e da borda para fora, temos a margem (margin). 
+
+Entre a margem e a borda, podemos determinar o contorno (outline) que é muito pouco utilizado, mas existe. Ele é um traçado visual que podemos criar fora da borda e o cálculo da sua espessura faz parte da margem estabelecida.
+
+ 
+TIPOS DE CAIXAR
+
+
+box-level == 
+
+Um elemento dito block-level sempre vai se iniciar em uma nova linha e vai ocupar a
+largura total do elemento onde ele está contido. Se não estiver contido em nenhuma
+outra caixa, ele vai ocupar 100% da largura do <body>.
+O elemento block-level mais conhecido é o <div> e suas variações semânticas
+modernas da HTML5, como <main>, <section>, <aside>, etc.
+
+<address>     <article>        <aside>        <blockquote>     <canvas>     <dd>
+
+<div>       <dl>     <dt>    <fieldset>      <figcaption>      <figure>
+
+<footer>      <form>         <h1>-<h6>        <header>          <hr>         <li>
+
+<main>         <nav>         <noscript>         <ol>     <p>          <pre>
+
+<section>     <table>     <tfoot>     <ul>    <video> 
+
+
+
+inline-level == 
+
+Um elemento do tipo inline-level não vai começar em uma nova linha, e sim no ponto
+exato onde foram definidos. E a largura dele vai ocupar apenas o tamanho relativo ao seu conteúdo.
+
+<a>       <abbr>         <acronym>      <b>       <bdo>      <br>
+
+<button>      <cite>        <code>        <dfn>       <em>         <i>
+
+<img>      <input>       <kbd>       <label>      <map>      <object>
+
+<output>        <q>        <samp>        <script>      <select>      <small>
+
+<span>    <strong>    <sub>      <textarea>     <tt>      <var>
+
+
+user agent stylesheet == configuração já estabelecida pelo navegador.
+
+
+margin: auto; ótima maneira para centralizar uma caixa 
+
+
+
+---------------- GROUPING TAS E SEMANTIC TAGS ----------------
+
+
+
+HEADER 
+
+Cria áreas relativas a cabeçalhos. Pode ser o cabeçalho principal de um site ou até
+mesmo o cabeçalho de uma seção ou artigo. Normalmente inclui títulos <h1> - <h6>
+e subtítulos. Podem também conter menus de navegação.
+
+NAV
+
+Define uma área que possui os links de navegação pela estrutura de páginas que vão compor o website. Um <nav> pode estar dentro de um <header>.
+
+MAIN 
+
+É um agrupador usado para delimitar o conteúdo principal do nosso site. Normalmente concentra as seções, artigos e conteúdos periféricos. 
+
+SECTION
+
+Cria seções para sua página. Ela pode conter o conteúdo diretamente no seu corpo ou
+dividir os conteúdos em artigos com conteúdos específicos. Segundo a documentação
+oficial da W3C, “uma seção é um agrupamento temático de conteúdos, tipicamente
+com um cabeçalho”.
+
+
+ARTICLE
+
+Um artigo é um elemento que vai conter um conteúdo que pode ser lido de forma
+independente e dizem respeito a um mesmo assunto. Podemos usar um <article>
+para delimitar um post de blog ou fórum, uma notícia, etc.
+
+ASIDE
+
+Delimita um conteúdo periférico e complementar ao conteúdo principal de um artigo
+ou seção. Normalmente um conteúdo <aside> está posicionado ao lado de um
+determinado texto ou até mesmo no meio dele, exatamente como fizemos no bloco de
+texto apresentado anteriormente, falando sobre “MÚLTIPLOS NÍVEIS”.
+
+FOOTER
+
+Cria um rodapé para o site inteiro, seção ou artigo. É um conteúdo que não faz parte diretamente do conteúdo nem é um conteúdo periférico (o que caracterizaria um
+<aside>), mas possui informações sobre autoria do conteúdo, links adicionais, mapa
+do site, documentos relacionados.
+
+
+--------------------------------------------------------------------------------
+
+PANEJAR O SITE
+
+montar a estrutura do site básica no MockFlow
+
+---------------------------------------------------------------------------------
+
+RESONSIVDADE 
+
+adaptar o tamanho do conteúdo do seu site a diferentes tamanhos de telas.
+
+
+
+-----Largura e altura adaptáveis-----
+
+Vimos as propriedades para largura (width) e altura (height) de uma caixa. Se não configurarmos a largura, por exemplo, ela vai ocupar 100% do seu contêiner. Porém, para que nosso site se adapte mais facilmente ao tamanho da tela, uma das técnicas básicas que podem ser utilizadas é deixar algumas caixas estrategicamente um pouco mais flexíveis indicando valores mínimos (min-width / min-height) e máximos (max-width / max-height). Para o nosso projeto, vamos definir os limites da largura da caixa <main> onde estará contido o conteúdo principal do artigo.
+
+
+Alguns tamanhos de tela comuns são:
+
+Móvel: 360 x 640, 375 x 667, 360 x 720
+iPhone X: 375 x 812
+Tabuleiro: 768 x 1024
+Portátil: 1366 x 768
+Laptop ou desktop de alta resolução: 1920 x 1080
+
+
+
+CENTRAIAR VIDEO
+
+Colocar dentro de uma Div
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,873 @@
+----- HTML e CSS -----
+
+Modulo 1 -- Primeiros passos HTML e CSS  
+            
+      Conceitos básicos, preparação do ambiente, semântica do  HTML5, textos, títulos, ligações, multimídia, estilos.
+
+Modulo 2 -- Deixando as coisas mais bonitas
+      
+      Fundamentos de design, psicologia das cores, tipografia, elementos CSS, modelo de caixas, wireframe, responsividade.
+
+Modulo 3 -- Colocando um protótipo no ar
+	
+      Versionamento de software, hospedagem de sites estáticos, tabelas
+
+Modulo 4 --  Aprofundando os conhecimentos 
+
+      Quadros em linha, formulários, media queries, mobile first
+
+Modulo 5 -- Novas tecnologias
+
+       Flexbox, Grid Layout, projeto final 
+
+
+
+
+RECOMENDAÇÕES PARA APRENDER HTML5 E CSS3
+
+   • Material de apoio do curso
+   • MDN ( Mozilla Developer Network  -  https://developer.mozilla.org/pt-BR/ )
+   • W3C ( World Wide Web Consortium  - https://www.w3.org/ ) inglês
+   • WHATWG  ( Web Hypertext Application Technology Working Group  - https://whatwg.org/ )  inglês
+   • W3Schools ( https://www.w3schools.com/ )
+       
+   • Html 5: Entendendo e Executando (O'Reilly)
+   • CSS (O'Reilly)
+   • Flexbox in CSS (O'Reilly)
+   • Grid Layout in CSS  (O'Reilly)
+   
+   • HTML5 e CSS3  (Elizabeth Castro / Bruce Hyslop )
+   • HTML e CSS -  (Jon Duckett) inglês 
+   • Use a cabeça! HTML e CSS  (Elizabeth Robson)
+   • Crie seu próprio site ( Nate Cooper Kim Gee) 
+
+   • HTML5     (Mauricio Samy Silva )
+   • CSS 3	(Mauricio Samy Silva )
+   • Fundamentos HTML5 e CSS3  	(Mauricio Samy Silva ) 
+   • CSS Grid Layout 	(Mauricio Samy Silva )
+
+   • Curso de Design Gráfico
+   • A psicologia da Cores 
+   • Design 
+   • Pensar com Tipos 
+
+   • HTML5  (smashing )
+   • CSS3   (smashing )
+
+-----------------------------------------------------------------------------------------------------
+
+ >>>>  Modulo 1  <<<< 
+
+     
+➙ A internet vem da ARPANET que surgiu durante a guerra com a intenção de proteger centros militares 
+
+➙ O cientista Tim Berners-Lee, do CERN, criou a World Wide Web, a
+linguagem HTML e o protocolo HTTP em 1992	
+
+➙ A empresa norte-americana Netscape criou o protocolo HTTPS (HyperText Transfer Protocol Secure), possibilitando o envio de dados criptografados para transações comercias pela internet.
+
+
+➙Representação de Dados 
+	Eu sinto te informar, mas resumindo bastante aqui, o computador só é capaz de
+compreender duas coisas: 0 e 1 ( Dígitos Binários ou bit) 
+	A computação reuni uma porção mínima de 8 bits para representar algum dado .. Byte é o nome dado a esse conjunto de 8 bits.
+	Ex =  01000001 representa a letra A 
+
+Multiplos do byte
+
+	8 bits = 1 Byte
+		 1024 Bytes = 1 KB
+     	 			1024 KB = 1 MB
+					   1024 MB = 1 GB
+						     1024 GB = 1 TB
+
+O computador só entende ondas quadradas ou ondas binarias. 
+
+DOMAIN NAME SYSTEM (DNS) Eles são como grandes “listas telefônicas”, criando uma ligação entre o nome do site e o número de IP relacionado a ele. 
+
+O domínio é um nome único que vai conseguir identificar o seu servidor ou as suas páginas. Para conseguir um domínio, você deve pagar pelo direito de usá-lo por um período mínimo de 1 ano. 
+
+
+➙ COMO FUNCIONAM HTML E CSS 
+
+ A linguagem HTML é focada em conteúdo  (texto, Imagem, Vídeo, Tabela, Listas )
+ 
+ Atrativos visuais é dado pelo CSS ( cores, sombras, tamanho, posicionamento )
+
+JavaScrip responsável pelas interações (menus, animações, popups, validações )
+
+--------------------------------------------------------------------------
+
+➙ CONTEUDO HTML 
+	
+  A HTML funciona baseada em marcações específicas chamadas tags. Uma tag é um conjunto de palavras entre sinais de colchete angular. (<tag> </tag>) A maioria das tags possuem uma abertura e um fechamento, e você identifica isso pela presença da barra no fechamento da tag. Além disso, as tags também podem ter atributos e valores, que vão configurar seu comportamento: 
+
+Ex =  <h1> Exemplo de titulo </h1>
+      <p> Exemplo de parágrafo </p>
+
+      <img src="foto.png" alt=" Exemplo de foto">
+	src/alt = parâmetros
+	foto.png/Exemplo de foto = valor 
+
+
+
+# ESTILO EM CSS 
+
+  h1 (seletores){
+     font-family: Arial; (declaração)
+     font-size: 20pt; 
+     color: blue;
+  }
+
+font-family: Arial: (propriedades: valor;)
+
+
+	ESTRUTURA BASICA DE UM DOCUMENTO HTML 
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Olá, Mundo!</h1>
+</body>
+</html>
+
+
+• Linha 1: Indica que o documento atual será escrito na versão mais atualizada da
+linguagem (no caso, HTML5)
+• Linhas 2 e 11: Delimitam o documento HTML, que é sempre dividido em duas
+partes: a cabeça e o corpo. Na linha 2, também estamos indicando que o conteúdo
+desse site será no idioma Português do Brasil.
+• Linhas 3 e 7: Delimitam a cabeça da página, local onde são realizadas algumas
+configurações iniciais como formatos, estilos, ícone de favoritos, etc.
+• Linha 4: adiciona ao documento atual o suporte a caracteres acentuados.
+Remover essa linha pode causar erros de renderização de algumas letras na tela.
+• Linha 5: Indica que o conteúdo aparecerá, por padrão, ocupando todo o espaço
+disponível da tela e com uma escala de 1:1.
+• Linha 6: Configura o título da página, que aparecerá como identificação da aba do
+navegador, ao lado do favicon.
+• Linhas 8 e 10: Delimitam o corpo da página, a maior porção do site, que vai
+aparecer na tela. É aqui onde colocaremos todo o nosso conteúdo. 
+
+----------------------------------------------------------------------
+
+PRIMEIRO PROJETO 
+	
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Olá, Mundo!</h1>
+    <hr>
+    <p>Esse é o meu primeiro documento HTML! Estou muito feliz.</p>
+    <p>Este é um momento único! Estou criando um site!</p>
+</body>
+</html>
+
+
+<hr> -- Linha Horizontal 
+
+------ Parágrafos e Quebras de linhas ------
+
+
+<!DOCTYPE html>
+<html lang="pt-br>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paragrafos</title>
+</head>
+<body>
+    <h1>Paragrafos e Quebrad de linhas</h1>
+    <hr>
+    <p>Voce pode escrever 
+        um paragrafo de 
+        qualquer jeito.
+        Basta colocar tudo 
+        no meio do par de tags
+        &lt;p&gt; e &lt;/p&gt;
+    </p>
+    <p>Se precisar quebrar 
+        o texto em algum lugar
+        específico <br> como esse.
+        você pode usar a tag  &lt;br&gt;
+    </p>
+
+</body>
+</html>
+
+
+<h1></h1> == titulo principal  (vai de h1 a h6)
+<p></p> == Paragrafo 
+<br> == quebra de linhas 
+
+
+
+Esses códigos são chamados de HTML Entities
+
+Símbolo                 Descrição                     Entitiy
+
+                    Espaço em branco                  &nbsp;
+  ®                 Marca registrada                  &reg;
+  ©                 Copyright                         &copy;
+  ™                 Trade Mark                        &trade;
+  €                 Euro                              &euro;
+  £                 Libra (pound)                     &pound;
+
+
+Outra coisa que você pode adicionar às suas páginas são os emojis, onde cada símbolo possui um código Unicode. emojipedia.org.
+
+Para adicionar emojis usamos 
+
+ <p>Vamos adicionar alguns emoji:
+        &#x2764  
+        &#x1FAE0
+ </p>
+
+Escolha uma categoria, clique no emoji escolhido e procure o seu Codepoints. No caso do exemplo acima, escolhemos o emoji com o código U+1F604. Para inserir esse emoji no seu site, use o código adaptado &#x1F604 em qualquer lugar que aceite palavras. É só substituir o U+ por &#x (com a letra x minúscula). 
+
+
+
+-----Você tem o direito de usar qualquer imagem no seu site? ----
+
+
+
+
+no google image - > Ferramentas --> Direito de Uso:
+
+Sem filtro de licença- todas imagens se tem ou não dono 
+
+Marcada para reutilização com modificação -- nível maior de direitos que você pode ter para pegar imagem a vontade  (melhor para se usar ) 
+
+Marcada para reutilização -- você pode baixar e usar esta imagem no seu site tanto comercialmente quanto pessoalmente só não pode modificar 
+
+Marcada para reutilização não comercial com modificação -- você pode baixar modificar usar desde que não seja para uso comercial 
+
+Marcada para reutilização não comercial -- você pode utilizar a imagem mas sem modificar e sem uso comercial 
+
+https://unsplash.com/pt-br  ( site para busca de imagens) 
+
+https://www.pexels.com/pt-br/  ( site para busca de imagens) 
+
+----------- GIMP ------------
+
+FORMATO DE IMAGEM 
+
+De forma resumida, na hora de escolher o formato de imagem para o seu site, opte sempre pelo formato JPEG com uma compactação entre 30% e 50%. O formato PNG só deverá ser usado quando precisarmos de transparência na foto.
+
+** Tamanho das imagens
+	
+A regra de outro nesses casos é: use imagens do tamanho certo! Vai precisar de uma imagem que vai ter 200 pixels de largura? Gere um arquivo exatamente com esse tamanho! Nada de ficar salvando arquivos gigantes e diminuindo o tamanho da imagem com códigos. 
+
+1200 ideal para usar no fundo da página 
+650 ideal para usar no meio da página
+
+
+**Como carregar uma imagem em HTML
+ 
+Adicionamos a tag <img>, responsável por carregar imagens que estão na pasta do projeto atual ou em links externos. Essa tag tem como parâmetros básicos o src (que vem de source, origem) e alt (que vem de alternative ou texto alternativo).
+Aqui vai uma DICA IMPORTANTE: quando for carregar uma imagem no Visual Studio Code, não digite a tag <img> com os colchetes angulares. No lugar disso, digite apenas img e o próprio editor vai sugerir a inserção da imagem.
+Toda imagem deve ter um texto alternativo, mesmo você achando que isso é muito chato de fazer. Textos alternativos ajudam muito na indexação do seu site em mecanismos de busca e também ajudam muito na Acessibilidade, pois se um visitante for deficiente visual, seu navegador vai ser capaz de descrever que tipo de foto está sendo mostrada ali. Tente ser objetivo na descrição da sua imagem, mas crie textos que fazem sentido. 
+
+**Usando Ícone de Favoritos (favicon) 
+
+Digitando apenas a palavra link em uma linha em branco e
+escolhendo a opção link:favicon.
+
+Recomendamos usar o nome do ícone como favicon.ico
+Os formatos aceitos para favicon é SVG, PNG mas a minha indicação para usar o arquivo no formato ICO 
+
+
+** Hierarquia de títulos 
+
+Os títulos possuem SEIS NÍVEIS de hierarquia, e esses níveis
+servem para organizar nosso conteúdo. Para isso, usamos as tags <h1>, <h2>, <h3>, <h4>, <h5> e <h6> para demarcar nossos títulos. 
+
+
+<h1></h1>
+<h2></h2>
+<h3></h3>
+<h4></h4>
+<h5></h5>
+<h6></h6>
+
+--- Gerador de Lorem Ipsum
+
+A expressão Lorem ipsum em design gráfico e editoração é um texto padrão em latim utilizado na produção gráfica para preencher os espaços de texto em publicações (jornais, revistas, e sites) para testar e ajustar aspectos visuais (layout, tipografia, formatação, etc.) antes de utilizar conteúdo real. 
+
+<p> lorem </p> 
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate quaerat soluta asperiores accusamus laborum, natus modi animi. Minima, assumenda omnis ipsam similique, quisquam natus qui harum esse laudantium enim quas!</p>
+
+
+--------FORMATAÇÕ DE TEXTOS ---------
+
+
+semântica --> “Semântica é o significado dos vocábulos, por oposição à sua forma.” 
+
+Analisando a frase acima percebemos que uma palavra pode ter
+forma e significado, e que a semântica dá mais valor ao significado. 
+
+Desde a mudança de versões, a W3C - consórcio responsável por normatizar a HTML
+- tem dado muito valor por adicionar novas tags que tenham mais significado e a tirar algumas tags que só se focam no efeito visual (forma) de apresentação. O intuito é deixar a apresentação gráfica por conta das CSS. 
+
+
+
+cuidado com as tags obsoletas 
+
+Os elementos da lista a seguir são totalmente obsoletos e não devem ser usados ​​pelos autores:
+
+applet
+Use embedou objectem vez disso.
+
+acronym
+Use abbrem vez disso.
+
+bgsound
+Use audioem vez disso.
+
+dir
+Use ulem vez disso.
+
+frame
+frameset
+noframes
+Use iframeCSS ou use inclusões do lado do servidor para gerar páginas completas com as várias partes invariantes mescladas.
+
+hgroup
+Para marcar subtítulos, considere colocar o subtítulo em um pelemento após o elemento h1- h6que contém o título principal, ou colocar o subtítulo diretamente dentro do elemento h1- h6que contém o título principal, mas separado do título principal por pontuação e/ou dentro, por exemplo, de um span class="subheading"elemento com estilo diferenciado.
+
+Títulos e subtítulos, títulos alternativos ou slogans podem ser agrupados usando os elementos headerou div.
+
+isindex
+Em vez disso, use uma combinação de campo explícito forme de texto .
+
+listing
+Use pree codeem vez disso.
+
+nextid
+Em vez disso, use GUIDs.
+
+noembed
+Use objectem vez de embedquando for necessário um fallback.
+
+plaintext
+Em vez disso, use o tipo MIMEtext/plain " " .
+
+strike
+Use delem vez disso se o elemento estiver marcando uma edição; caso contrário, use sem vez disso.
+
+xmp
+Use preand codeem vez disso e escape os caracteres " <" e " &" como " &lt;" e " &amp;" respectivamente.
+
+basefont
+big
+blink
+center
+font
+marquee
+multicol
+nobr
+spacer
+tt
+Em vez disso, use elementos apropriados ou CSS.
+
+
+
+** Principais formatações
+
+Negrito / Destaque
+   - Nesta frase temos um <b>termo em negrito</b> usando a tag B (não semântica).
+   - Nesta frase, tenho um <strong>termo em destaque</strong> usando a tag STRONG (semântica).
+
+
+Itálico / Ênfase
+   - Nesta frase, temos um <i>termo em itálico</i> usando a tag I (não semântica).
+   - Nesta frase, temos um <em>termo em ênfase</em> usando a tag EM (semântica).
+
+Texto marcado
+   - Podemos criar também <mark>um texto marcado</mark> usando a tag MARK.
+
+Texto grande e pequeno
+   - Estamos criando um <big>texto grande</big> e um <small>texto pequeno</small> nesse parágrafo.
+
+Texto deletado
+   - Podemos marcar <del>um texto como excluído</del> para indicar que ele deve ser lido, mas não considerado.
+
+Texto inserido 
+   - Podemos marcar <ins>um texto como inserido</ins> para dar uma ênfase e indicar que ele foi adicionado depois.
+   - Existe também o <u>sublinhado</u> com a tag U (não semântica).
+
+Texto sobrescrito
+   - Para inserir coisas do tipo x<sup>20</sup>+3
+
+Texto subscrito 
+   - Para inserir coisas do tipo H<sub>2</sub>O 
+
+
+** Citações e Códigos **
+
+
+Código Fonte / Pré Formatado
+
+    O comando <code>document.getElementById('teste')</code> é escrito em linguagem JavaScript
+
+    <pre>
+        <code>
+            num = int(input('Digite um número'))
+            if num % 2 == 0:
+                print(f'O número {num} é PAR')
+            else:
+                print(f'O número {num} é IMPAR')
+            print('Fim do Programa')
+        </code>
+    </pre>	
+	
+
+** Citações **
+
+Para criar uma citação em HTML, podemos usar a tag <q> (do Inglês quote, que
+significa citar). O texto que estiver entre <q> e </q> já vai receber automaticamente
+as aspas, mas não terá nenhum deslocamento. Essa técnica é mais usada quando
+queremos uma citação no meio de um parágrafo. Também podemos criar citações mais longas (em bloco) e que tenham um parágrafo só para si. Nesse caso, colocaremos tudo dentro de <blockquote> e </blockquote> e o texto ganha um recuo automaticamente. Podemos também colocar um link para o
+texto original, usando o parâmetro cite dentro da tag.
+
+
+    Como diria o pai de um amigo: <q>o computador é um burro muito rápido.</q>
+
+> Citações completas <
+    Segundo Fábio Flatschart, no sei livro HTML5 Embarque imediato
+    
+<blockquote cite="https://www.google.com/search?q=html+portugues&scas">
+        Principais conceitos apresentados A evolução do HTMLCompatibilidade do HTML 5 Modelos de conteúdoMontando a estrutura do documentoTrabalhando com grupos de conteúdoA semântica dos elementos de textoImagens e SVGObjetos e conteúdo
+</blockquote>
+
+
+--- Abreviações ---
+
+Essa é uma novidade da HTML5 e que ajuda muito em áreas como a de Tecnologia, que usa muitas siglas e abreviações. Sempre que você quiser escrever uma sigla, mas deixar claro ao usuário (e aos mecanismos de busca) o significado dela, use a tag <abbr>.
+
+
+
+---------  LISTAS EM HTML --------------
+
+*** Listas Ordenadas ***
+A HTML chama de ordered lists todas aquelas listas onde a ordem dos itens é algo muito importante.
+Para criar uma ordered list, vamos usar a tag <ol> para delimitar a lista e <li> (list item) para identificar cada item da lista
+
+
+     <ol type="1" start="4">
+
+        <li>Acordar</li>
+        <li>Ligar para o João</li>
+        <li>Tomar café</li>
+        <li>Escovar os dentes</li>
+
+    </ol>
+
+A tag <ol> possui um parâmetro type, onde configuramos o tipo de marcador da lista atual. As opções de valores para esse parâmetro são:
+‣ 1 - Valor padrão. Cria listas numeradas. Ex: 1, 2, 3, 4, …
+‣ A - Cria listas alfabéticas em maiúsculas. Ex: A, B, C, D, …
+‣ a - Cria listas alfabéticas em minúsculas. Ex: a, b, c, d, …
+‣ I - Cria listas com algarismos romanos em maiúsculas. Ex: I, II, III, IV, …
+‣ i - Cria listas com algarismos romanos em minúsculas. Ex: i, ii, iii, iv, …
+Você também pode indicar o início da contagem usando o parâmetro start.
+Por exemplo, a tag <ol type=“I” start = “5”> vai gerar itens numerados como V, VI, VII, VIII, IX, … 
+
+
+
+*** Listas não Ordenadas ***
+
+
+Unordered lists, também chamadas de listas com marcadores, que são aquelas onde a ordem dos itens não influenciará no significado da lista. Ela é apenas uma ótima maneira para organizar os itens que não apresentam uma classificação necessariamente.
+Para criar uma unordered list, vamos usar a tag <ul> para delimitar a lista e a tag <li> para criar cada um dos seus itens internos. 
+
+    <ul type="circle">
+        
+	<li>Pão</li>
+        <li>Leite</li>
+        <li>Arroz</li>
+        <li>Feijão</li>
+
+    </ul>
+
+
+
+
+O marcador padrão é a bolinha preta totalmente preenchida (circle), mas existe a opção de configurar a propriedade type da tag <ul> com os seguintes valores:
+‣ disc - padrão. Uma bola preta totalmente pintada
+‣ circle - Uma bola com uma borda preta e sem preenchimento
+‣ square - Um pequeno quadrado preto totalmente pintado
+
+
+*** Listas Mistas e Definições  ***
+
+Minhas linguagens favoritas
+    <ol>
+        <li>Antigas</li>
+        <ol type="a">
+            <li>Cliper</li>
+            <li>Visual Basic</li>
+            <li>Fortran</li>
+            <li>Delphi</li>
+        </ol>
+        <li>Novas</li>
+        <ol type="a">
+            <li>PHP</li>
+            <li>Python</li>
+            <li>JavaScript</li>
+            <li>Kotlin</li>
+        </ol>
+    </ol>
+
+Meus Jogos Favoritos
+
+    <ol>
+        <li>NES</li>
+        <ul type="disc">
+            <li>Mario Bros</li>
+            <ul type="square">
+                <li>Mario Bros 3</li>
+                <li>Mario: Lost Levels</li>
+            </ul>
+            <li>Ninja Gaiden</li>
+        </ul>
+        <li>SNES</li>
+        <ul type="disc">
+            <li>Mario</li>
+            <li>Donkey Kong</li>
+        </ul>
+        <li>PlayStation</li>
+        <ul type="disc">
+            <li>Final Fantasy</li>
+            <li>Castelvania</li>
+        </ul>
+    </ol>
+
+*** Lista de Definições *** 
+
+Toda lista de definições está dentro de uma tag <dl> </dl> (definition list) Cada termo é um <dt> (definition term) e cada descrição é um <dd> (definition description). 
+
+    <dl>
+
+        <dt>HTML</dt>
+        <dd>Linguagem de marcação para a criação do conteudo de um 	site</dd>
+        <dt>CSS</dt>
+        <dd>Linguagem de marcação para a criação de design de um 	site</dd>
+        <dt>JavaScript</dt>
+        <dd>Linguagem de Programação para a criação de 	interatividede de um site</dd>
+
+    </dl>
+
+
+
+
+--------------- LINKS E ÂNCORAS EM HTML5 ----------------------
+ 
+
+
+*** Usando Links externos ***
+
+Para criar um hyperlink, devemos criar âncoras através da tag <a>. O principal atributo dessa tag é o href, que cria uma referência hipertexto. Vamos ver um exemplo simples:
+
+
+    <p>Você pode acessar o meu <a href="https://github.com/Karol-Oliveira" target="_blank" rel="externos">repositorio publico no GitHub</a></p>
+
+    <p>Você também pode acessar o meu <a href="https://www.youtube.com/@karolineoliveira5754" target="_blank" rel="externos">canal gratuito no youtube</a></p>
+
+target="" 
+
+Para poder controlar onde o site de destino vai abrir, podemos usar o atributo target,
+que suporta os seguintes valores:
+‣ _blank vai abrir o link em uma nova janela em branco
+‣ _self vai abrir o link na janela ou frame atual (padrão)
+‣ _top vai desfazer todos os frames e abrir o destino no navegador completo
+‣ _parent similar ao uso do _top em uma referência à janela mãe
+‣ nome-do-frame caso esteja usando frames, indicar o nome da janela a abrir 
+
+rel=""
+
+Existe um recurso bem interessante para links que é indicar qual é a
+natureza do destino usando o atributo rel. Esse atributo aceita vários
+valores, entre eles vou citar:
+‣next indica que o link é para a próxima parte do documento atual
+‣prev indica que o link é para a parte anterior do documento atual
+‣author indica que é um link para o site do autor do artigo atual
+‣external indica que é um link para outro site que não faz parte do siteatual
+‣ nofollow indica que é um link para um site não endossado, como um link pago 
+
+
+
+*** Usando Links Internos ***
+
+index.html
+
+    <h2>Usando Links Internos</h2>
+<p>Está é a primeira página do site. Se você quiser, pode acessar também a minha <a href="pag002.html" rel="next
+    ">segunda página</a></p>
+    <p>Você tambem pode acessar a nossa <a href="noticias/pag003.html" target="_self" rel="next">página de notícias</a></p>
+
+pag002.html
+
+<h1>esta é  segunda página do meu site</h1>
+    <p>A segunda página está aqui</p>
+    <p>Está página é um oferecimento de <a href="https://www.hostnet.com.br" target="_blank" rel="nofollow">Hostnet</a></p>
+    <p><a href="index.html" rel="prev">Voltar para a primeira página</a></p>
+
+
+pag003.html 
+
+    <h1>Terceira página</h1>
+    <p>Está é a terceira página </p>
+    <p><a href="../index.html">Voltar para a primeira página</a></p>
+
+
+*** Usando Links para Downloads ***
+
+     <ul>
+        <li><a href="livro/meulivro.pdf" download="meulivro.pdf" 	type="application/pdf">Baixar um livro em PDF</a></li>
+        <li><a href="livro/meulivro.zip" download="meulivro.zip" 	type="application/zip">Livro compactado em ZIP</a></li>
+    </ul>
+
+
+
+----------------------- MIDIAS EM HTML5 --------------------
+
+** IMAGENS DINÂMICAS**
+
+A novidade aqui é que inserimos essa imagem dentro da tag
+<picture>, que vai concentrar as outras fontes de imagem. Por padrão, a imagem foto-g.png (1000x1000px) será carregada.
+O problema vai começar a surgir quando a janela do navegador chegar perto dos 1000 pixels de largura, pois a foto não vai mais caber lá. Vamos agora adicionar uma linha para resolver esse problema: 
+
+<picture>
+
+        <source media="(max-width: 750px )" srcset="imagem/imagem-	p.png" type="image/png">
+
+        <source media="(max-width: 1050px )" srcset="imagem/imagem-	m.png" type="image/png">
+
+        <img src="imagem/imagem-g.png" alt="A imagem flexível 	funciona">
+
+</picture>
+
+
+
+Note que a tag <source> possui três atributos:
+‣ type vai indicar o media type da imagem que usamos (veja mais informações sobre media types no capítulo 10)
+‣ srcset vai configurar o nome da imagem que será carregada quando o tamanho indicado for atingido
+‣ media indica o tamanho máximo a ser considerado para carregar a imagem indicada no atributo srcset. 
+
+
+**  ÁUDIOS **
+
+Com a HTML5, veio também a facilidade em compartilhar áudio nos nossos sites e
+sem depender necessariamente de JavaScript ou plugins extras. A partir de agora,
+basta uma tag <audio> e alguns <source> para fazer seu site ser capaz de tocar
+qualquer áudio. 
+
+MP3 WAV OGG
+
+
+Vamos analisar os principais atributos da tag <audio> antes de mais nada:
+‣ O atributo preload indica se o áudio será pré-carregado ou não e aceita três
+valores:
+๏ metadata vai carregar apenas as informações sobre o arquivo (tamanho,
+tempo, informações de direitos, etc)
+๏ none não vai carregar absolutamente nada até que o usuário clique no botão
+play ou um script inicie a reprodução
+๏ auto (padrão) vai carregar o arquivo de áudio inteiro assim que a página for
+carregada, mesmo que o usuário nunca aperte o play
+‣ O atributo controls vai apresentar o player na tela. Caso não seja colocado na tag
+<audio>, o controle será transparente e o usuário não poderá interagir com ele.
+‣ O atributo autoplay, quando inserido, vai iniciar a reprodução do áudio assim que
+a página for carregada.
+‣ O atributo loop vai fazer com que o áudio seja repetido eternamente assim que
+terminar a sua reprodução. 
+
+Dentro da tag <audio>, adicionamos vários <source> com formatos diferentes do
+mesmo áudio. Coloque na parte de cima o seu formato favorito. Os demais só serão
+carregados caso o de cima falhe. 
+
+
+ <audio preload="metadata" controls autoplay loop>
+        <source src="midia/running through the forest.mp3" type="audio/mpeg">
+        <source src="midia/running through the forest.mp3" type="audio/ogg">
+        <source src="midia/running through the forest.mp3" type="audio/wav">
+        <p>Infelizmente seunavegador não consegue reproduzir áudio <a href="midia/running 	through the forest.mp3">Clique aqui para baixar o arquivo MP3</a></p>
+ </audio>
+
+
+evitar arquivos WAV pois é muito pesado
+
+
+
+** VÍDEOS **
+
+Para inserir um vídeo em nosso site, podemos utilizar a nova tag <video> da HTML5, caso o arquivo esteja hospedado no nosso próprio servidor. 
+
+Antes de mais nada, vamos criar a tag <video> e configurar alguns atributos
+importantes:
+‣ width vai indicar a largura que o vídeo vai ter na tela. Nesse exemplo, 600px.
+‣ poster configura uma imagem que vai aparecer como uma capa, enquanto o
+visitante não aperta o play para reproduzir o vídeo
+‣ controls vai configurar se os controles do vídeo vão aparecer na parte inferior da
+mídia. Por padrão, os controles não aparecerão, mas basta colocar a palavra
+controls na tag <video>.
+‣ autoplay diz para o navegador se o vídeo vai começar a tocar automaticamente,
+assim que a página for carregada. 
+
+Os formatos suportados são MPEG, WEBM e OGG, mas os dois primeiros são os que possuem maior compatibilidade com os navegadores atualmente. 
+
+Nada de ospedar vídeo acima de 1080p no seu próprio site 
+
+
+Navegador                    Arquivos compatíveis
+
+Microsoft Edge                   .mp4 .m4v
+Apple Safari                     .mp4 .m4v
+Google Chrome                    .mp4 .m4v .webm .ogv
+Mozilla Firefox                  .webm .ogv
+Opera                            .webm .ogv
+
+
+<video width="500" controls poster="imagens/capa-video.png">
+        <source src="midia/mar-e-conchas.mp4" type="video/mp4">
+        <source src="midia/Mar E Conchas.webm" type="video/webm">
+        <source src="midia/mar e conchas.ogv" type="video/ogg">
+
+        <p>Seu navegador não tem compatibilidade com reprodução de vídeos.</p>
+ </video>
+
+vídeos hospedados direto no servidor pode gerar problemas para o cliente 
+no uso de Banda no acesso do site gerando assim um custo muito grande 
+
+
+
+--------------------------------CSS---------------------------------
+
+*** ESTILO INLINE COM CSS3 ***
+
+Quando o estilo é aplicado dentro da tag
+todos os estilos são aplicados na mesma linha do HTML5
+
+...
+
+<body style="font-family: Arial, Helvetica, sans-serif; color: blue;">
+
+    <h1 style="color: red;">Capítulo 1 </h1>
+    <h2>Capítulo 1.1</h2>
+    <p> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Esse magni quam nostrum non harum impedit quia perspiciatis ullam molestias hic ipsam deserunt perferendis minima eveniet, quos expedita, voluptas suscipit ea.</p>
+    <h2>Capítulo 1.2</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste, eum? Earum veniam et assumenda in laborum corrupti? Tempore, fuga! Maiores atque harum vel tempora. Sunt accusantium excepturi ipsam minima rem.</p>
+
+    <h1>Capítulo 2</h1>
+    <h2>Capitulo 2.1</h2>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eos quibusdam fuga aspernatur provident veritatis error sit aliquam dolores, consectetur voluptatem, officiis dolorem expedita! Nesciunt, praesentium ab mollitia beatae ullam odit.</p>
+</body>
+</html>
+
+
+*** ESTILO INTERNOS COM CSS3 ***
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estilo locais/internos</title>
+    <style>
+        body {
+            background-color: lightcyan;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 20px;
+        }
+        h1{
+            color: darkblue;
+            background-color: lightblue;
+        }
+        h2 {
+            color: darkred;
+        }
+        p {
+            text-align: justify;
+        }
+    </style>
+
+</head>
+
+
+DESVANTAGENS
+
+o tamanho do código fica muito grande 
+
+tem q ser aplicado em todas a paginas 
+
+
+
+*** ESTILO EXTERNO COM CSS3 ***
+
+Manter as folhas de estilo fora do código HTML, além de uma maior organização faz
+com que tudo seja reaproveitado de maneira mais eficiente nas outras páginas do
+nosso site. Para isso, utilizamos a tag <link> especialmente configurada para
+trabalhar com arquivos externos de estilo. Essa tag deve ser colocada dentro da área
+<head> do seu documento HTML.
+
+Pode utilizar mais de um link 
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estilo Externos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+
+** PÁGINA DE ESTILO CRIADA FORA DO ARQUIVO HTML ** 
+style.css
+
+
+
+@charset "UTF-8";
+/* Regra @charset caso haja problemas com acentuação */
+
+body {
+    background-color: lightgoldenrodyellow;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+}
+h1{
+    color: maroon;
+    background-color: goldenrod;
+}
+h2 {
+    color: darkred;
+}
+p {
+    text-align: justify;
+}
+
+...
+
+
+Podemos usar os 3 estilos em um mesmo aquivo, porem o estilo inline sobrepoe os outro 
+sendo clasificado por força:
+
+Inline
+Local 
+Extermo 
+
+porem o externo é muito mais versatil
+
+
+
+
+
+
+
+
+

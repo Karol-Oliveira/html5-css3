@@ -1,1 +1,99 @@
 ----------HTML5 e CSS3 ------ MODULO 3 --------
+
+Git - GitHub
+
+Repositórios locais e repositórios remotos
+
+
+-- Criar copias de segurança ou versões anteriores. 
+
+Gerenciador de versões = Git (repositório local) 
+
+lugar para guardar e deixar seu site hospedado = GitHub (repositório remoto)
+
+um depende do outro porem funcionam de forma independente.
+
+-----------------------------------------------------------------------------------------------------------------------
+
+IMAGENS DE FUNDO 
+
+-- Basicamente essas imagens de fundo elas tem uma ideia de composição visual
+
+<title>Teste de Imagem de Fundo</title>
+
+    <style>
+        body {
+            background-image: url('imagens/wallpaper001.jpg');
+        }
+
+        div.quadrado{
+            background-color: lightgray;
+            border: 1px solid black;
+            border-radius: 10px;
+            display: inline-block;
+            height: 300px;
+            width: 300px;
+        }
+
+        div#q1 {
+            background-color: skyblue;
+        }
+
+        div#q2 {
+            background-image: linear-gradient(to bottom, yellow, red);
+        }
+
+        div#q3 {
+            background-image: url('imagens/pattern003.png');
+        }
+    </style>
+</head>
+<body>
+    <div class="quadrado" id="q1"></div>
+    <div class="quadrado" id="q2"></div>
+    <div class="quadrado" id="q3"></div>
+</body>
+</html>
+
+
+
+**PERSONALIZANDO A APLICAÇÃO DO BACLGROUD **
+
+Quando o tamanho da caixa é maior que o tamanho da imagem, por padrão, a
+imagem será repetida nos dois eixos (eixo x e eixo y) quantas vezes for necessário
+para cobrir a extensão da caixa contêiner.
+
+É possível alterar esse comportamento usando a propriedade background-repeat,
+que aceita os seguintes valores: 
+
+- repeat;
+- no-repeat;
+- repeat-x;
+- repeat-y;
+
+Note que ao usar o no-repeat, isso não obriga o navegador a aumentar ou diminuir
+o tamanho da imagem para caber no tamanho da caixa.
+
+
+
+posição de referência-- 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

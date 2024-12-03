@@ -59,26 +59,78 @@ IMAGENS DE FUNDO
 
 **PERSONALIZANDO A APLICAÇÃO DO BACLGROUD **
 
-Quando o tamanho da caixa é maior que o tamanho da imagem, por padrão, a
-imagem será repetida nos dois eixos (eixo x e eixo y) quantas vezes for necessário
-para cobrir a extensão da caixa contêiner.
+Quando o tamanho da caixa é maior que o tamanho da imagem, por padrão, a imagem será repetida nos dois eixos (eixo x e eixo y) quantas vezes for necessário para cobrir a extensão da caixa contêiner.
 
-É possível alterar esse comportamento usando a propriedade background-repeat,
-que aceita os seguintes valores: 
+É possível alterar esse comportamento usando a propriedade background-repeat, que aceita os seguintes valores: 
 
 - repeat;
 - no-repeat;
 - repeat-x;
 - repeat-y;
 
-Note que ao usar o no-repeat, isso não obriga o navegador a aumentar ou diminuir
-o tamanho da imagem para caber no tamanho da caixa.
+Note que ao usar o no-repeat, isso não obriga o navegador a aumentar ou diminuir o tamanho da imagem para caber no tamanho da caixa.
+
+<title>Personalização dos fundos</title>
+        <style>
+            body{
+
+                /*podemos usar imagens externas, sabendo que se um dia essa imagem saia do ar ela dexara de aparecer no site*/
+
+                background-image: url('https://gustavoguanabara.github.io/html-css/imagens/mascote.png');
+            
+                background-size: 100px 100px;
+
+                background-repeat: no-repeat;
+
+                /* background-size: tamanho da imagem 
+                background-repeat: (no-repeat/repeat/repeat-x/repeat-y) todos pelo ponto de partida no canto superior esquerso 
+                */
+            }
+        </style>
+
+
+--- POSIÇÃO DE REFERÊNCIA ---
+
+background-position:
 
 
 
-posição de referência-- 
+° left top
+° left center
+° left bottom
+° center center
+° right top
+° right center
+° right bottom
 
 
+<title>Posição dos fundos</title>
+    <style>
+        div.bloco{
+            height: 200px;
+            border: 1px solid black;
+            border-radius: 10px;
+            margin: 10px;
+            background-image: url('imagens/wallpaper002.jpg');
+        }
+
+        div#q1 {
+            background-position: left top;
+        }
+
+        div#q2 {
+            background-position: left center;
+        }
+
+        div#q3 {
+            background-position: right bottom;
+        }
+
+        div#q4 {
+            background-position: center center;
+        }
+    </style>
+</head>
 
 
 

@@ -132,6 +132,126 @@ background-position:
     </style>
 </head>
 
+importante colocar uma cor no fundo.
+
+
+--- background-size ---
+
+auto == (padrão) a imagem de fundo será aplicada em seu tamanho original.
+
+[length]px
+[length]% ==  Redimensiona a largura da imagem e faz a altura se adaptar automaticamente.
+Podemos também informar as duas dimensões na sequência ou também usar valores percentuais.
+ 
+cover == Muda o tamanho da imagem para que ela seja sempre totalmente exibida na tela, sem nenhum corte.
+
+contain == Redimensiona a imagem para que ela cubra o contêiner, mesmo que para isso ocorram alguns eventuais cortes.
+
+
+
+A propriedade background-attachment aceita os valores:
+
+scroll == (padrão) a imagem de fundo vai rolar junto com o conteúdo.
+fixed == A imagem de fundo vai ficar fixada enquanto o conteúdo vai sendo rolado.
+
+
+/* shorthanr do background 
+              -- color 
+              -- image 
+              -- position
+              -- repeat
+              -- size 
+              -- attachment 
+            */
+
+ background: black url('imagens/wallpaper002.jpg') center center no-repeat cover fixed;
+
+
+
+<title>Fundo fixo de tela</title>
+    <style>
+        body{
+           /* height: 100vh;
+            background-color: black;
+            background-image: url('imagens/wallpaper002.jpg');
+            background-position: center top;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;*/
+
+            /* shorthand do background 
+              -- color 
+              -- image 
+              -- position
+              -- repeat
+              --size 
+              -- attachment 
+
+              colocar o size separado do shorthand
+            */
+
+            background: black url('imagens/wallpaper002.jpg') center center no-repeat fixed;
+            background-size: cover;
+        }
+        main{ 
+            background-color: white;
+            max-width: 400px;
+            padding: 10px;
+            margin: auto;
+            border: 1px solid darkblue;
+            border-radius: 15px;
+        }
+    </style>
+</head>
+
+
+
+
+
+
+CENTRALIZAÇÃO VERTICAL E HORIZONTAL 
+
+<title>Alinhamento Vertical</title>
+    <style>
+        #container {
+            height: 96vh;
+            padding: 10px;
+            background-color: blueviolet;
+            position: relative;
+            background-image: url('imagens/target001.png');
+            background-size: 100% 100%;
+        }
+
+        #conteudo{
+            background-image: url('imagens/target001.png');
+            background-size: 100% 100%;
+            height: 200px;
+            width: 400px;
+            background-color: yellow;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+    </style>
+</head>
+<body>
+    <section id="container">
+        <article id="conteudo">
+
+        </article>
+    </section>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
 
 
 

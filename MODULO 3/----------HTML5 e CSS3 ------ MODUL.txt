@@ -245,6 +245,11 @@ CENTRALIZAÇÃO VERTICAL E HORIZONTAL
 </html>
 
 
+MINI PROJETO CORDEL EFEITO PARALLAX 
+
+Você já deve ter percebido que quando estamos em movimento (em um carro, ônibus ou trem) e olhamos para a paisagem na janela lateral, aquilo que está mais perto de você parece se mover
+muito mais rápido e o que está mais longe tem um deslocamento muito mais lento? Pois isso é o que chamamos de efeito parallax.
+
 
 
 

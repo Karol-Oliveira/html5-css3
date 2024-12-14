@@ -57,7 +57,7 @@ IMAGENS DE FUNDO
 
 
 
-**PERSONALIZANDO A APLICAÇÃO DO BACLGROUD **
+**PERSONALIZANDO A APLICAÇÃO DO BACKGROUD **
 
 Quando o tamanho da caixa é maior que o tamanho da imagem, por padrão, a imagem será repetida nos dois eixos (eixo x e eixo y) quantas vezes for necessário para cobrir a extensão da caixa contêiner.
 
@@ -442,19 +442,34 @@ rowspan="3"  Ocupar três linhas
 
 
 
+AGRUPANDO COLUNAS COM COLGROUP 
+
+Podemos criar um agrupamento de colunas, definindo um
+<colgroup> dentro da tabela, logo abaixo da tag <table>: 
+
+ <h1>Exercício de Tabelas</h1>
+    <table>
+        <colgroup>
+            <col class="cnome" span="2">
+            <col class="cidade">
+            <col class="cprof">
+        </colgroup>
+
+
+Isso vai atribuir uma classe a cada coluna (ou conjunto de colunas, quando usamos span). Ao criar uma configuração de cor para cada uma dessas três classes (c1, c2 e c3), podemos criar um efeito de configuração em grupos de colunas: 
+
+O span no HTML faz com que algumas colunas fizessem parte de um mesmo conjunto de colunas que receberam a mesma formatação de cor. 
 
 
 
+TABELA RESPOSIVA 
+
+envelopar toda a tabela dentro de uma div e usando a class aplicar a propriedade:
 
 
-
-
-
-
-
-
-
-
+  #container {
+            overflow-x: auto;
+        }
 
 
 

@@ -263,12 +263,204 @@ Mini projeto --- olhar o mini projeto para saber como faz o efeito parallax
 NAO PODE USAR TABELA PARA CRIAR A ESTRUTURA DO SITE 
 
 
-a herarquia de tabelas simples 
+<h1>Minha primeira tabela</h1>
+    <!--
+        HIERARQUIA DE TABELAS (Simples)
+        table = tabela 
+            table row (tr) = linha de tabela
+                table header (th) = cabeçalho de tabela
+                table data (td) = dado de tabela
+    -->
+    
+    <table>
+        <tr> <!-- Primeira linha -->
+            <td>A1</td>
+            <td>B1</td>
+            <td>C1</td>
+        </tr>
+        <tr class="linha"> <!-- Segunda linha -->
+            <td>A2</td>
+            <td>B2</td>
+            <td>C2</td>
+        </tr>
+        <tr> <!-- Terceira linha -->
+            <td>A3</td>
+            <td>B3</td>
+            <td>C3</td>
+        </tr>
+        <tr> <!-- Quarta linha -->
+            <td>A4</td>
+            <td class="dado">B4</td>
+            <td>C4</td>
+        </tr>
+    </table>
 
- table
-	table row  = linhas de tabelas
-		table header = cabeçalho de tabela
-		table data =  dado de tabela
+se a hierarquia não for obedecida os dados apareceram ou antes ou depois da tabela 
+
+
+Para retirar os espaços entre as bordas e deixar mais parecido com uma tabela usamos a propriedade no css border-collapse: collapse ( separate é o padrão)
+
+        table {
+            width: 400px;
+            border-collapse: collapse;
+        }
+        td{
+            border: 1px solid black;
+            padding: 8px;
+        }
+
+
+as tags <td> e <tr> não é necessário utilizar a tag de fechamento </td> e </tr> 
+
+
+ANATOMIA DE TABELAS GRANDES 
+
+<h1>Uso de tabelas grandes.</h1>
+
+    <!--ANATOMIA PARA TABELAS GRANDES 
+        Table
+	    Caption (legenda da tabela)
+            Thead 
+                tr, td , th 
+            Tbody 
+                tr, td, th 
+            Tfoot
+                tr, td, th 
+    -->
+
+
+
+ESCOPO 
+
+
+A tag <th> é usada para definir títulos de colunas ou
+linhas, agora é importante saber o que é escopo desse título. 
+
+<table>
+        <caption>População das Unidades Federativas</caption>
+        <thead>
+            <tr>
+                <th scope="col">Estado</th>
+                <th scope="col">População</th>            
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>São Paulo</td>
+                <td class="num">45.973.190</td>
+            </tr>
+            <tr>
+                <td>Minas Gerais</td>
+                <td class="num">21.322.692</td>
+            </tr>
+            <tr>
+                <td>Rio de Janeiro</td>
+                <td class="num">17.219.679</td>
+            </tr>
+            <tr>
+                <td>Bahia</td>
+                <td class="num">14.850.513</td>
+            </tr>
+            <tr>
+                <td>Paraná</td>
+                <td class="num">11.824.665</td>
+            </tr>
+            <tr>
+                <td>Rio Grade do Sul</td>
+                <td class="num">11.229.915</td>
+            </tr>
+           </tbody>
+
+        <tfoot>
+            <tr>
+                <th scope="row">Total de habitantes</th>
+                <td class="num"><strong>212.583.720</strong></td>
+            </tr>
+        </tfoot>
+    </table>
+
+
+
+EFEITO ZEBRADO NA TABELA 
+
+Para fazer o efeito zebrado usamos a pseudoclasse :nth-child ()
+que permite selecionar elementos com base em sua posição entre os filhos do mesmo pai. 
+ 
+
+elemento:nth-child(n)
+
+elemento: O tipo de elemento (como div, p, li, etc.) que você quer selecionar.
+
+n: Pode ser um número fixo, uma fórmula, ou palavras-chave específicas.
+
+tbody > tr:nth-child(2n) {
+            background-color: lightgray;
+        }
+
+
+
+Palavras-chave
+nth-child(even): Seleciona os filhos com índice par (baseado em 1).
+nth-child(odd): Seleciona os filhos com índice ímpar.
+
+
+
+CABEÇALHO FIXO 
+
+colocar a posição da tabela relativa no css para que possamos no thead usar a seguinte configuração
+
+ thead > tr > th {
+            position: sticky;
+            top: -1px;
+            background-color: #383838;
+        }
+
+
+MESCLAGEM DE CÉLULAS 
+
+
+<body>
+    <h1>Mesclagem de Células</h1>
+
+    <table>
+        <tr>
+            <td>A</td>
+            <td colspan="2">B</td>
+            
+        </tr>
+        <tr>
+            <td rowspan="3">D</td>
+            <td>E</td>
+            <td>F</td>
+        </tr>
+
+
+colspan="2"  Ocupar duas colunas
+
+rowspan="3"  Ocupar três linhas 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

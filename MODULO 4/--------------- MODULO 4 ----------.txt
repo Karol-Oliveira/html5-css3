@@ -1,0 +1,232 @@
+--------------- MODULO 4 -------------
+
+IFRAME 
+
+Um iframe é basicamente uma “janela aberta” dentro da
+nossa página para apresentar o conteúdo de outras páginas.
+Esse é um recurso bem antigo, presente desde as versões anteriores da HTML, mas que até hoje são utilizados por alguns sites, o que causa muita discussão em relação a segurança. Vamos abordar esse assunto mais pra frente, mas antes vamos aprender a usar esse recurso.
+
+    <h1>Teste de iframe</h1>
+    <p>Acessando o site do
+        <iframe src="https://www.cursoemvideo.com" frameborder="0" scrolling="no"></iframe>
+    para aprender a programar.</p>
+
+alguns sites não aceita colocar seu conteúdo dentro de iframes 
+
+Por padrão o tamanho de um iframe é de 300x150px 
+
+---A propriedade scrolling aceita três valores:
+
+• no - não permite a rolagem da página, mesmo que ela seja maior que o tamanho estabelecido para o frame.
+
+• yes - habilita a rolagem do conteúdo, mesmo que seu conteúdo não seja grande o suficiente para preencher o frame.
+
+• auto - (padrão) a rolagem é habilitada apenas se o conteúdo for maior que o tamanho do quadro estabelecido. 
+
+Alguns navegadores em celulares mais antigos bloqueiam este recurso por isso talvez seja interessante adicionar um link <a> com uma frase entre o <iframe> e </iframe> que levara a pessoa para este site.
+
+
+DIRECIONANDO NOVO CONTEÚDO PARA UM IFRAME
+
+	Podemos dar ordens a um quadro para trocar o seu conteúdo através de links ou códigos JavaScript. O primeiro passo é dar um nome a ele através do parâmetro name. 
+	 
+
+ <iframe id="tela" name="quadro"> Infelizmente seu navegador não é compativel com este recurso</iframe>
+
+No link dentro do target ao invés de colocar os seus valores colocamos o valor que usamos em name
+
+
+    <ul>
+        <li><a href="paginas-extras/pagina001.html" target="quadro">Primeira página</a></li>
+        <li><a href="paginas-extras/pagina002.html" target="quadro">Segunda página</a></li>
+        <li><a href="paginas-extras/pagina003.html" target="quadro">Terceira página</a></li>
+    </ul>
+
+isso fará com que o conteúdo das paginas abram dentro do iframe.
+
+
+
+GERANDO CONTEUDO DENTRO DO IFRAME 
+	
+	
+	No lugar de usar o parâmetro src para indicar a origem (souce) do conteúdo de um quadro, podemos usar o parâmetro srcdoc para criar um conteúdo simples estaticamente dentro do iframe.
+
+<iframe id="tela" name="quadro" srcdoc="<h1>Escolha uma das opções acima</h1> <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. A eveniet ipsam tenetur ut nam quod recusandae iusto placeat, quis maxime omnis reprehenderit at, nobis laboriosam ipsa quam!</p><img src='imagens/wallpaper002.jpg'>"> Infelizmente seu navegador não é compativel com este recurso</iframe>
+
+O recomendado é criar um arquivo separado e inserir o site.
+
+
+PROBLEMAS QUE UM IFRAME PODE TRAZER PARA O SEU SITE
+
+(no confunda iframe com frame)
+
+
+• Problemas com mecanismos de busca.
+
+	Segundo o próprio Google, podem acontecer problemas com a indexação de conteúdos contidos dentro de iframes e talvez não haja uma boa relação entre o que está fora (na página principal) e o que está dentro (na parte interna do iframe). 
+
+
+• A usabilidade.
+
+	Ao decidir usar iframes para apresentar conteúdos em
+nosso site, saiba que existem alguns incômodos relativos
+à usabilidade e acessibilidade desse conteúdo. 
+	ex- O botão de voltar para a página anterior no navegador fica meio perdido, sem saber se quer voltar no site externo ou dentro do iframe.
+	   Confunde os usuários quando um site que está dentro de um iframe tenta abrir uma página em uma nova janela.
+	    Se o site a ser aberto não for responsivo, provavelmente vai ficar visualmente quebrado ou esquisito dentro de um iframe na tela de um celular
+	
+• Segurança.
+ 	Ao usar iframe em projetos que vão efetivamente ao ar, devemos tomar o cuidado de dificultar as ações cruzadas e as relações entre o nosso site e aquele apresentado dentro do quadro. Isso pode deixar seu site vulnerável a ataques do tipo cross-site e seus visitantes suscetíveis a ataques XSS.
+Mas nem tudo está perdido e podemos proteger um pouco mais nosso site usando configurações de sandbox e definindo políticas de referência mais restritivas. E é sobre isso que falaremos nos próximos tópicos desse capítulo. 
+
+
+
+TORNANDO AS COISAS MAIS SEGURAS
+
+SANDBOX 
+
+	
+	Cientes dos problemas que um iframe mal configurado pode trazer, a HTML5 implementou o novo recurso de sandbox. Uma
+caixa de areia (sandbox) é um ambiente controlado que permite
+exibir outros sites para seu visitante sem que ele possa “tomar
+controle” do site principal e aos dados do visitante.
+Quando habilitamos a sandbox em nosso iframe, automaticamente o site que está dentro do quadro perde algumas funcionalidades, dentre elas:
+
+• Não pode mais enviar dados de formulários
+• Não pode mais executar scripts
+• Desabilita todo tipo de API, janelas modais e popups
+• Desabilita todo tipo de plugin com <embed>, <object>, <applet>
+• Evita que o site dentro do iframe assuma a navegação top level do navegador
+• Bloqueia recursos como autoplay e foco automático em elementos de formulário
+
+Para carregar um site dentro de um quadro iframe em ambiente protegido, basta declarar:
+
+<iframe src="paginas-extras/pagina004.html" sandbox="sandbox">
+        Seu navegador não é compatível com este recurso
+</iframe>
+
+
+Usar a propriedade sandbox com o valor sandbox (entre aspas) vai ligar todos os bloqueios citados acima.
+Caso queira abrir alguma excessão e desbloquear algum dos recursos pontualmente, poderá usar um ou mais valores da lista a seguir:
+
+• allow-forms
+• allow-scripts
+• allow-modals
+• allow-popups
+• allow-same-origin
+• allow-top-navigation
+
+
+POLÍTICA DE REFERÊNCIA
+
+Outra maneira de limitar a ação de sites que carregarmos em nossos iframes é configurando a política de referência (referral policy).
+
+Ao configurar a propriedade referrerpolicy em um iframe, conseguimos definir quantos dados serão compartilhados com o site de destino. A maneira de manter a navegação mais “anônima” é usar o valor no-referer para esse atributo.
+
+Existem outros valores, como:
+
+• no-referrer-when-downgrade (padrão)
+• origin
+• origin-when-cross-origin
+• same-origin
+• strict-origin
+• strict-origin-when-cross-origin
+• unsafe-url
+• no-referrer = não vai permitir capturar dados nenhum 
+
+<iframe src="paginas-extras/pagina004.html" sandbox="sandbox" referrerpolicy="no-referrer">
+        Seu navegador não é compativel com este recurso
+</iframe>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

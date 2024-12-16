@@ -138,29 +138,133 @@ Existem outros valores, como:
         Seu navegador não é compativel com este recurso
 </iframe>
 
+DICAS PARA IFRAMES MELHORES 
+
+Vídeos
+Mapas do Google
+Mapas do Waze
+Google Documents
+
+
+---------------------------------------------------------------
+
+FORMULÁRIO
+
+   <form>
+        <p>Nome: <input type="text" name="nome" id="nome"></p>
+        <p>Sobrenome: <input type="text" name="sobrenome" 	id="sobrenome"></p>
+        <p><input type="submit" value="Enviar"></p>
+   </form>
+
+
+A primeira e a última linhas vão delimitar o formulário. Tudo aquilo que estiver dentro desse par de tags será considerado como conteúdo dos campos. 
+
+Precisamos fazer algumas configurações adicionais para que esse formulário funcione de maneira mais semântica e correta. 
+
+• Em primeiro lugar, vamos adicionar dois atributos importantes à tag <form>: o method e o action. O primeiro vai indicar o método de envio dos dados e o segundo vai dizer para onde os dados serão enviados.
+
+• Não existe nenhuma ligação semântica entre a caixa de texto e seu identificador. Para isso, vamos adicionar um <label> para que possa ser feito o relacionamento entre o campo e seu identificador.
+
+• Para que o <label> possa funcionar corretamente, a caixa de texto deverá ter um id. 
+
+autocomplet ="off" desligar as sugestões de preenchimento
+
+LABEL (importante)
+
+<form action="cadastro.php">
+        <p>
+            <label for="inome">Nome:</label> 
+            <input type="text" name="nome" id="inome">
+        </p>
+        <p>
+            <label for="isobrenome">Sobrenome:</label> 
+            <input type="text" name="sobrenome" id="isobrenome">
+        </p>
+        <p>
+            <input type="submit" value="Enviar">
+        </p>
+   </form>
 
 
 
+METODOS DE ENVIO DE FORMULÁRIOS 
+
+existe dois métodos que são simples para envio de formulário
+o método padrão é GET, o outro método é POST que oculta os dados do URL mas  não significa que seus dados estão seguros.
+
+
+<form method="get" action="cadastro.php">
+        <p>
+            <label for="inome">Nome:</label> 
+            <input type="text" name="nome" id="inome">
+        </p>
+        <p>
+            <label for="isobrenome">Sobrenome:</label> 
+            <input type="text" name="sobrenome" 		    id="isobrenome">
+        </p>
+        <p>
+            <input type="submit" value="Enviar">
+        </p>
+   </form>
+
+
+APRENDER SOBRE HTTPS PARA PROTEGER DADOS 
+
+quando se envia os dados pelo método get você so pode enviar ate 3mil Byts 
+
+
+Em primeiro lugar, podemos usar GET em um formulário contanto que:
+
+• Os dados a serem enviados não sejam sensíveis, como endereços, números de documentos, senhas, etc.
+
+• Tivermos formulários simples e que possam ser compartilhados facilmente através de uma URL. Por exemplo, o Google usa GET no seu formulário, pois você pode enviar um link para qualquer pessoa, já com a ação da busca embutida, como em http://google.com.br/search?q=Gustavo+Guanabara
+
+• Os dados a serem enviados nunca ultrapassem 3000 bytes.
+
+• Não contenha envio de arquivos como imagens (i.e. fotos de perfil), arquivos PDF, etc.
+
+
+Já o método POST é mais recomendado para casos em que:
+
+• Não queremos que os dados apareçam explicitamente na URL do navegador.
+
+• Capturamos dados como senhas, documentos e outro tipo de dado sensível.
+
+• Precisamos enviar muitos dados (acima de 3000 bytes ~ sem limites).
+
+• Precisamos enviar imagens ou outros tipos de arquivos. 
 
 
 
+<h1>Teste de Formulário</h1>
+
+    <form action="cadastro.php" method="post">
+
+        <!--campo de usuario-->
+        <p>
+            <label for="iusu">Usuário:</label>
+            <input type="text" name="usu" id="iusu" required minlength="5" maxlength="15" size="10">
+        </p>
+        <!--campo de senha-->
+        <p>
+            <label for="isen">Senha:</label>
+            <input type="password" name="sen"  id="isen" required minlength="8">
+        </p>
+        <!--botões de enviar/limpar-->
+        <p>
+            <input type="submit" value="Enviar">
+           <input type="reset" value="Limpar">
+        </p>
+        <!--required torna o preenchimento do campo obrigatorio-->
+    </form>
 
 
+O uso dos parâmetros minlength="5" maxlength="15" determina o número mínimo e máximo de caracteres permitidos
 
+SIZE para definir o tamanho da caixa ( numero de caracteres exibidos)  
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+Formulário normalmente tem um autocomplete ligado.
+Autocomplete colocado no input tem diversas opções diferente de quando se coloca direto na tag form que é so ON  e OFF 
 
 
 

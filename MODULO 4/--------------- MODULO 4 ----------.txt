@@ -471,6 +471,8 @@ Media Types
 
 Media Features (complemento/ característica de media) 
 
+ORIENAÇÃO DO DISPOSITIVO
+
 -- configuração para todas as telas em modo retrato ficaram dentro deste arquivo css
 
 <link rel="stylesheet" href="estilo/retrato.css" media="screen and (orientation: portrait)"> 
@@ -484,6 +486,149 @@ Media Features (complemento/ característica de media)
 -- Para todo tipo de media ( configurações gerais que se aplica a todo tipo de media.)
 
 <link rel="stylesheet" href="estilo/style.css" media="all"> 
+
+
+obs.: Para projetos muito grandes é interessante criar os arquivos separado como indicado acima.
+ 
+MEDIA QUERY DEFINIDA NAS CSS
+
+
+/* Declarações retrato*/
+
+@media screen and (orientation: portrait) {
+    body {
+        background-image: url('../imagens/cev-portrait.jpg');
+        background-position: center bottom;
+    }
+}
+
+/* Declarações Paisagem*/
+
+@media screen and (orientation: landscape) {
+    body {
+        background-image: url('../imagens/cev-landscape.jpg');
+        background-position: left bottom;
+
+    }
+}
+
+
+
+MOBILE FIRST (móvel primeiro) 
+
+Mobile First é uma abordagem de design e desenvolvimento para a criação de interfaces web, onde o foco inicial é em dispositivos móveis. A ideia central é começar projetando para as telas menores e, progressivamente, adicionar funcionalidades e estilos conforme o tamanho da tela aumenta, utilizando técnicas como Media Queries no CSS.
+
+
+Por que usar o Mobile First?
+
+Crescimento do uso de dispositivos móveis: A maioria dos usuários acessa sites via smartphones. Criar pensando primeiro nesses dispositivos melhora a experiência para o público-alvo.
+
+Carregamento mais rápido: Desenvolvendo primeiro para dispositivos móveis, é possível priorizar apenas os elementos essenciais, melhorando o desempenho.
+
+Acessibilidade: Garante que os conteúdos sejam otimizados e utilizáveis em qualquer dispositivo.
+
+Facilidade de manutenção: É mais simples adicionar estilos para telas maiores do que tentar simplificar para telas menores.
+
+VANTAGENS 
+
+• Uma maior divulgação do site, pois como vimos anteriormente, ferramentas de busca vão valorizá-lo.
+
+• Uma melhor experiência do usuário, que vai ter acesso ao conteúdo que foi pensado para que pudesse ser consumido de forma mais confortável e sem confusões.
+
+• Aumento na credibilidade, já que os visitantes vão ter a percepção (ainda que inconsciente) de que quem criou o site se preocupou com a sua experiência.
+
+• Otimização do carregamento, uma vez que sofremos com conexões lentas e dispositivos populares sem tanto poder de  processamento. 
+
+
+DEVICE BREAKPOINTS
+
+ão pontos definidos em design responsivo que ajudam a adaptar o layout de um site ou aplicativo para diferentes tamanhos de tela. Eles são usados em conjunto com media queries no CSS para alterar estilos com base na largura (e às vezes na altura) da tela.
+
+Aqui está uma tabela com breakpoints comuns:
+
+
+Dispositivo	                      Largura (em pixels)	                   Descrição
+Extra small (XS)	                    Até 576px	                  Smartphones em modo retrato
+Small (SM)	                           576px - 768px	          Smartphones grandes
+Medium (MD)	                           768px - 992px	          Tablets e dispositivos menores
+Large (LG)	                           992px - 1200px	          Laptops pequenos
+Extra large (XL)	                   1200px - 1400px	          Laptops grandes e desktops
+Extra extra large (XXL)                    Acima de 1400px	          Monitores grandes
+
+
+
+/* Smartphones */
+
+@media (max-width: 576px) {
+
+}
+
+/* Tablets */
+
+@media (min-width: 577px) and (max-width: 768px) {
+  
+}
+
+/* Laptops pequenos */
+
+@media (min-width: 769px) and (max-width: 992px) {
+ 
+}
+
+/* Monitores grandes */
+
+@media (min-width: 1401px) {
+  
+
+}
+
+
+ CRIAÇÃO DE MENU HAMBURGUER 
+
+-- <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" /> 
+
+<i id="burguer" class="material-symbols-outlined" onclick="clickMenu()">menu</i> 
+
+link para adicionar os ícones do google 
+
+CSS DO MENU HAMBURGUER 
+
+/*menu dinamico (hamburguer) */
+
+i#burguer {
+    background-color: rgb(48, 48, 48);
+    color: white;
+    display: block;
+    text-align: center;
+    padding: 10px;
+    cursor: pointer;
+}
+
+i#burguer:hover {
+    background-color: white;
+    color: black;
+}
+
+
+
+JAVASCRIPT DO MENU HAMBURGUER 
+
+(o que faz ele ser dinâmico mostrando ou escondendo as opções)
+
+  <script>
+        function clickMenu() {
+            if (itens.style.display == 'block') {
+                itens.style.display = 'none'
+            } else {
+                itens.style.display = 'block'
+            }
+        }
+    </script>
+
+
+
+
+
 
 
 

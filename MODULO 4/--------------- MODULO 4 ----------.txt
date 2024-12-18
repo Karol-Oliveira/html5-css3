@@ -267,61 +267,223 @@ Formulário normalmente tem um autocomplete ligado.
 Autocomplete colocado no input tem diversas opções diferente de quando se coloca direto na tag form que é so ON  e OFF 
 
 
+Para INPUT DO TIPO NUMERO para definir o máximo e o mínimo usamos apenas min e max e para contabilizar números decimais tipo 5.5 usamos o comando step e indicamos o intervalo que queremos 
+
+<p>
+      <label for="imedia">Média:</label>
+      <input type="number" name="media" id="imedia" min="0"                                     
+      max="10" placeholder="0 a 10" step="0.1" required> 
+</p>
+
+Para deixa um preenchimento sugerido usamos value="" este comando automaticamente tira o placeholder.
+
+
+ESTUDAR MAIS SOBRE REGEX ( EXPRESSÕES REGULARES )
+
+Regex, ou expressões regulares, é uma ferramenta poderosa para busca e manipulação de textos. Elas permitem definir padrões que identificam combinações de caracteres em strings, sendo amplamente utilizadas em linguagens de programação, editores de texto, ferramentas de busca, entre outros.
+
+Aqui está uma visão geral de componentes comuns em regex:
+
+1. Metacaracteres
+
+Esses símbolos têm significados especiais:
+
+. : Corresponde a qualquer caractere, exceto quebra de linha.
+^ : Início da string.
+$ : Final da string.
+* : Zero ou mais ocorrências do caractere/padrão anterior.
++ : Uma ou mais ocorrências do caractere/padrão anterior.
+? : Zero ou uma ocorrência do caractere/padrão anterior.
+{n} : Exatamente n ocorrências.
+{n,} : Pelo menos n ocorrências.
+{n,m} : Entre n e m ocorrências.
+
+2. Classes de caracteres
+
+Definem grupos de caracteres permitidos:
+
+[abc] : Corresponde a a, b, ou c.
+[^abc] : Corresponde a qualquer caractere que não seja a, b, ou c.
+[a-z] : Intervalo de a a z.
+[A-Z] : Intervalo de A a Z.
+[0-9] : Intervalo de dígitos (0 a 9)
+.
+3. Sequências especiais
+
+\d : Dígitos ([0-9]).
+\D : Não dígitos ([^0-9]).
+\w : Caractere de palavra (letras, dígitos, _).
+\W : Não caracteres de palavra.
+\s : Espaço em branco (espaços, tabs, quebras de linha).
+\S : Não espaços em branco.
+
+4. Agrupamentos e referências
+
+(abc) : Agrupa padrões (permite aplicar operadores como +, * ou referenciar o grupo).
+| : Alternativa lógica (ex.: a|b corresponde a a ou b).
+\1, \2, etc.: Referências a grupos capturados.
+5. Modificadores (Flags)
+i : Ignora diferenças entre maiúsculas e minúsculas.
+g : Procura por todas as correspondências (global).
+m : Modo multilinha (permite ^ e $ funcionarem em várias linhas).
+s : Permite que . corresponda a quebras de linha.
+
+
+
+        <p>
+            <label for="itel">Telefone</label>
+            <input type="tel" name="tel" id="itel" 		    
+	     autocomplete="tel" required placeholder="(DDD) 	    
+             99999-9999" pattern="^[0-9]{2}-[0-9]{5}-[0-9]{4}$">
+
+        </p>
+
+
+<fieldset> == é usado para agrupar elementos relacionados dentro de um formulário, oferecendo uma maneira semântica e visual de organizar informações. Geralmente, ele é acompanhado pelo elemento <legend>, que serve para dar um título ao grupo.
+
+
+input do tipo radio = Esses botões permitem que o usuário escolha apenas uma entre várias opções de um grupo. Para que isso ocorra é necessário colocar o atributo name com o mesmo valor 
+
+
+    <fieldset>
+            <legend>Sexo</legend>
+            <input type="radio" name="genero" id="isxmas"><label for="isxmas">Masculino</label><br>
+            <input type="radio" name="genero" id="isxfem" checked><label for="isxfem">Feminino</label><br>
+    </fieldset>
+
+para deixa uma opção sugerida usamos o atributo checked
+
+
+input:file = Envio de Arquivo
+
+quando utilizar o controle de envio de arquivos não devemos usar o método get e sim o post 
+
+
+OUTRAS MANEIAS DE FAZE FORMULÁRIOS
+
+ <form action="" method="get">
+        <p>
+            <label for="iest">Estado</label>
+
+            <select name="estado" id="iest">
+                <option value="">--- Escolha ---</option>
+                <optgroup label="Região Sudeste">
+                    <option value="MG">Minas Gerais</option>
+                    <option value="RJ">Rio de Janeiro</option>
+                    <option value="SP">São Paulo</option>
+                </optgroup>
+
+                <optgroup label="Região Nordeste">
+                    <option value="RN">Rio Grande do Norte</option>
+                    <option value="PE">Pernambuco</option>
+                    <option value="MA">Maranhão</option>
+                </optgroup>
+            </select>
+        </p>
+        <p>
+            <label for="iprof">Profissão</label>
+            <input type="text" name="prof" id="iprof" list="listprof">
+            <datalist id="listprof">
+                <option value="ADM">Administrador</option>
+                <option value="CONT">Contador</option>
+                <option value="DEV">Desenvolvedor</option>
+                <option value="PROF">Professor</option>
+            </datalist>
+        </p>
+        <p>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+        </p>
+    </form>
+
+
+
+select = te permite apenas selecionar uma opção da lista 
+
+datalist combinado com o input text premite além de selecionar o da lista digitar caso não tenha essa opção. 
+
+
+Caixa de texto  
+
+<textarea name="msg" id="imsg" cols="30" rows="10"></textarea> 
+
+	cols= numero de colunas que vai aparecer na tela 
+	rows= numero de linhas que vai aparecer na tela
+
+	<p>
+            <label for="imsg">Mensagem</label><br>
+            <textarea name="msg" id="imsg" cols="30" rows="10" placeholder="Digite sua Mensagem" maxlength="140"></textarea>
+        </p>
 
 
 
 
+OUTPUT ==  pode ser usado para executar tarefas simples e gerar uma saída na tela.
 
 
 
+<form action="#" method="post" autocomplete="on">
+        <p>
+            <label for="in1">Numero 1:</label>
+            <input type="number" name="n1" id="in1" min="0" max="50" required oninput="isoma.innerHTML = Number(in1.value) + Number(in2.value)">
+        </p>
+        <p>
+            <label for="in2">Numero 2:</label>
+            <input type="number" name="n2" id="in2" min="0" max="50" required oninput="isoma.innerHTML = Number(in1.value) + Number(in2.value)">
+        </p>
+
+        <p>
+            <label for="isoma">Soma:</label>
+            <output name="soma" id="isoma"></output>
+        </p>
+
+        <p>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+        </p>
+    </form>
 
 
+--------------------------------------------------------------
+
+MEDIA QUERIES
+
+Media Query = Media Types +  Media Features
+
+Media Query para impressão e telas
+
+Esse é o primeiro passo para fazer om site Media Query, criar um arquivo css para estilizar o site para telas e outro arquivo css para impressão.
+
+<link rel="stylesheet" href="estilo/tela.css" media="screen">
+
+<link rel="stylesheet" href="estilo/impressora.css" media="print">
 
 
+em cada arquivo css você configura da sua maneira lembrando sempre da semântica.
+
+Media Types
+
+-- media="screen"
+
+-- media="print"
+
+-- media="all"
+
+Media Features (complemento/ característica de media) 
+
+-- configuração para todas as telas em modo retrato ficaram dentro deste arquivo css
+
+<link rel="stylesheet" href="estilo/retrato.css" media="screen and (orientation: portrait)"> 
 
 
+-- configuração para todas as telas em modo paisagem ficaram dentro deste arquivo css
+
+<link rel="stylesheet" href="estilo/paisagem.css" media="screen and (orientation:landscape)">
 
 
+-- Para todo tipo de media ( configurações gerais que se aplica a todo tipo de media.)
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<link rel="stylesheet" href="estilo/style.css" media="all"> 
 
 
 

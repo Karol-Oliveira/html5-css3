@@ -1,0 +1,203 @@
+MODULO 5
+-------------------------------------------------------------------
+
+O que vamos aprender neste modulo.
+
+- Flexbox ( caixas flexíveis) 
+
+- Grid Layout ( multidimencional )
+
+-Projeto Final (Portfolio) 
+
+-------------------------------------------------------------------
+CSS 2.1 - Block Layout
+	- Inline Layout
+	- Table Layout
+	- Positioned Layout 
+
+
+CSS 3 - Flexible box 
+  Module Level 1
+
+CSS 3 - Grid Layout
+  Module Level 1/2
+
+-------------------------------------------------------------------
+
+Qual o formato da água ?
+ 
+A forma da água vai depender do contêiner onde ela estiver  
+
+(mesmo principio para flexbox)
+
+-------------------------------------------------------------------
+Quem é o pai?
+
+Quando você vai construir algo com elementos flexíveis você precisa 
+saber quem é o elemento pai
+
+O elemento pai é justamente o que chamamos de contêiner (flex-contêiner/display: flex; ) e os elementos filhos são os itens (flex-itens)
+
+
+------------------------------------------------------------------
+
+CSS FLEXIBLE BOX MODULE (trabalha com caixas)
+
+
+-flex-direction (no pai)
+
+   Padrão  flex-direction: row;             Esquerda para a direita 
+
+           flex-direction: row-revers;      Direita para esquerda
+
+  	   flex-direction: column;          De cima para baixo
+
+	   flex-direction: column-reverse;  De baixo para cima 
+
+EIXOS (axis) 
+        
+Eixo principal (main-axis)
+
+	-main-start = começo do eixo principal 
+	-main-end = final do eixo principal 
+
+Eixo transversal (cross-axis)
+
+	-cross-star = inicio do eixo transversal
+	-cross-end = final do eixo transversal 
+
+-flex-direction: row; quando está configuração esta aplicada o main-axis é da esquerda para a direita e o cross-axis de cima para baixo
+
+
+-flex-direction: row-revers; quando está configuração está aplicada o mani-axis é da direita para esquerda e o cross-axiz não tem inversão 
+
+-flex-direction: column; quando está configuração está aplicada o mani-axis não é mais na horizontal ele vai de cima para baixo na vertical e o cross-axis passa a ir da 			 esquerda para a direita 
+
+- flex-direction: column-reverse; quando está configuração está aplicada o mani-axis não é mais na horizontal ele vai de baixo para cima na vertical e o cross-axis passa 
+                                  a ir da esquerda para a direita 
+
+
+----------------------------------------------------------------------------------------------------------------------------------
+
+EMPACOTAMENTO E FLUXO (pai)
+
+-flex-wrap ( empacotamento/ encapsulamento)
+
+Comportamento do container 
+
+        Padrão          flex-wrap: nowrap ( não quebra)
+
+O encolhimento dos itens dentro do contêiner vai depender muito do conteúdo que existe nele 
+
+
+	flex-wrap: wrap; (quebra)  pegara o ultimo elemento e quebrara no sentido do eixo transversal 
+
+	flex-wrap: wrap-reverse; quando ele quebrar vai ser no sentido oposto ao eixo transversal
+
+
+
+-flex-flow (flex-direction + flex-wrap) (fluxo)
+
+	É a junção de flex-direction e flex-wrap em uma propriedade e é declarada da seguinte forma :
+
+
+	flex-flow: row nowrap; 
+
+
+---------------------------------------------------------------------------------------------------------------------------------
+
+ALINHAMENTO NOS EIXOS (pai)
+
+obs: 
+
+- justify-content (alinhamento em relação ao eixo principal main-axis)
+	
+	justify-content:flex-start = o primeiro item vai ficar grudado no main-star e o espaço em branco vai ser jogado pro final do eixo principal.
+
+	justify-content: flex-end = o primeiro item vai ficar grudado no main-end e o espaço em branco vai ser jogado pro main-start do eixo principal.
+
+	justify-content: center = colocara todos os itens alinhados no centro e os espaços em branco é distribuído de forma igual no main-start e no main-end 
+
+	justify-content: space-between = coloca o primeiro item no main-start e o ultimo item no main-end, todos os outros itens estarão no meio e com espaçamento igual.
+
+	justify-content: space-evenly = não vai grudar o primeiro e o ultimo elemento nas extremidades do contêiner, ele vai colocar os elementos  dispostos dentro do 						contêiner de forma que antes e depois dos itens o espaçamento seja iguais
+
+	justify-content: space-around = vai separar o espaço útil do contêiner em partes iguais e dentro dessas partes iguais os itens serão centralizados
+
+
+
+-align-items (alinhamento em relação ao eixo transversal cross-axis)
+	
+	align-items: stretch = esticar os elementos caso aumente o cross-axis
+
+	align-items: flex-start =  grudara no inicio do eixo transversal (cross-start)  
+	
+	align-items: flex-end = grudara no final do eixo transversal (cross-end) 
+
+	align-items: center =  centraliza deixando uma faixa branca no começo e no final do contêiner 
+ 
+
+----------------------------------------------------------------------------------------------------------------------------
+
+CENTRALIZAÇÃO COM FLEXBOX 
+
+
+	display: flex;
+        flex-flow: row nowrap;
+        justify-content: center;
+        align-items: center;
+
+
+basta fazer essas configurações no contêiner que a caixa vai ficar sempre centralizada no elemento pai
+
+---------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -152,16 +152,27 @@ basta fazer essas configurações no contêiner que a caixa vai ficar sempre cen
 
 ---------------------------------------------------------------------------------------------------------------------------
 
+ALIHAMENO DE CONTEUDO EMPACTADO
 
+(flex-flow: row wrap)
 
+ -align-content (alinhamento do elementos no eixo transversal mas quando estão empacotados).
 
+	align-content: stretch = pegar toda a área disponível e dividir pelo numero de linhas ou colunas (esticar os itens).
+	
+	
+	align-content: flex-start = todos os elementos grudado no cross-start
 
+	align-content: flex-end = todos os elementos grudados no cross-end
 
+	align-content: center = centratila criando espaços em branco no cross-start e no cross-end
 
+	align-content: space-between = alinhar os primeiros elementos ao cross-start e os ultimos elementos ao cross-end dividindo o espaço no meio com outros itens 
 
+	align-content: space-evenly = alinha os elemento com o mesmo espaçamento entre eles e as extremidades cross-start e cross-end 
 
-
-
+	align-content: space-around = divide o eixo transversal em partes iguais e centralizar os elementos dentro desta parte.
+	
 
 
 

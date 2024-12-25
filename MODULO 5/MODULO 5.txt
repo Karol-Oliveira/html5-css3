@@ -239,6 +239,10 @@ Um valor maior indica que o item encolherá mais em comparação com itens de me
 Valores negativos: Não são permitidos.
 
 
+OBS.: Caso queira que os elementos sejam totalmente elásticos 
+use flex-grow: 1; e flex-shrink: 1;
+
+
 -----------------------------------------------------------------
 
 

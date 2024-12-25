@@ -173,16 +173,73 @@ ALIHAMENO DE CONTEUDO EMPACTADO
 
 	align-content: space-around = divide o eixo transversal em partes iguais e centralizar os elementos dentro desta parte.
 	
+-----------------------------------------------------------------------
+ANATOMIA DOS ITENS FLEXIVEIS
+
+(Quando se cria contêiner flexbox a parte de fora é flex mas a de dentro ( itens ) não são flex.)
+
+-Todo itens que estiver em um contêiner com flexbox vai ter order 0
+
+-order = é usada para alterar a ordem de exibição de itens em um container flex ou grid, sem alterar a ordem do HTML. Ela aceita valores numéricos, onde o padrão é 0
 
 
 
+-align-self = é usada para ajustar o alinhamento de um único item dentro de um container flexível ou grid, independentemente do alinhamento dos outros itens no mesmo container. Ele sobrepõe o valor da propriedade align-items para o item em questão. (alinha em relação ao eixo transversal) 
+
+align-self: auto;  Usa o valor definido em align-items do container pai (comportamento padrão).
+
+align-self: flex-start; Alinha o item no início do eixo cross-start.
+
+align-self: flex-end; Alinha o item no final do eixo cross-end.
+
+align-self: center; Centraliza o item ao longo do eixo cross-start e cross-end.
+
+*align-self: baseline; Alinha o item na linha de base do texto.
+
+align-self: stretch; Estica o item para preencher o espaço disponível (aplicável apenas se o tamanho não for fixo).
+-----------------------------------------------------------------
+
+-flex-basis =  é uma propriedade no CSS usada em layouts com flexbox. Ela define o tamanho inicial de um item flexível antes de qualquer espaço adicional ser distribuído, considerando as propriedades flex-grow e flex-shrink.
 
 
+<length>: Um valor fixo, como px, em, %, etc., que define o tamanho inicial do item. Exemplo: flex-basis: 200px;.
+
+auto (default): O item usa seu tamanho natural, ou o definido pela propriedade width se aplicável.
+
+0: O tamanho inicial será ignorado, e o espaço será distribuído inteiramente pelo comportamento de flex-grow e flex-shrink.
 
 
+sendo assim no eixo principal é ideal usar flex-basis
 
 
+-----------------------------------------------------------------
+importante esta com o fluxo em nowrap 
 
+-flex-grow = (o quanto pode crescer) = define a capacidade de crescimento de um item flexível dentro de um container flexbox. Ela determina o quanto um item pode crescer em relação aos outros itens para preencher o espaço disponível no container.
+
+<number>: Um número positivo que indica a proporção de crescimento do item. O valor padrão é 0, o que significa que o item não crescerá.
+
+Exemplo: Se dois itens têm flex-grow: 1 e flex-grow: 2, o segundo item crescerá o dobro do primeiro.
+
+0 (default): O item não cresce, mesmo que haja espaço extra disponível.
+
+Valor negativo: Não é permitido; apenas números positivos ou zero são válidos.
+
+-----------------------------------------------------------------
+importante esta com o fluxo em nowrap 
+
+-flex-shrink = (o quanto pode encolher) = define a capacidade de encolhimento de um item flexível dentro de um container flexbox quando não há espaço suficiente. Ela controla o quanto um item pode reduzir seu tamanho em relação aos outros itens no container.
+
+<number>: Um número que representa a proporção de encolhimento do item. O valor padrão é 1.
+
+Um valor maior indica que o item encolherá mais em comparação com itens de menor valor.
+
+0: O item não encolherá, mesmo que o container fique menor que o necessário.
+
+Valores negativos: Não são permitidos.
+
+
+-----------------------------------------------------------------
 
 
 

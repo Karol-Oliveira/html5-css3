@@ -245,15 +245,70 @@ use flex-grow: 1; e flex-shrink: 1;
 
 -----------------------------------------------------------------
 
+flex: é uma propriedade shorthand (abreviação) usada em elementos filhos de um contêiner flexível:
+
+ex 
+
+flex : flex-grow  flex-shrink  flex-basis
+
+	    flex-shrink: 1;
+            flex-grow: 1;
+            flex-basis: 150px;
+
+flex: 1 1 150px;
 
 
 
+flex: 0 1 auto; ou flex: initial;  são os valores padronizados de flex-grow flex-shrink flex-basis
+
+flex: 0 0 auto; ou flex: none; deixa os elementos não flexíveis e o tamanho dele vai depender do tamanho do conteúdo 
+
+flex: 1 1 auto; ou  flex: auto; crescer e diminuir o elemento a vontade e o limite de crescer ou diminuir vai depender do tamanho do conteúdo.
+
+flex: 3; o valor indicado é atribuído apenas para o grow mantendo os outros elementos padronizados 
 
 
+------------------------------------------------------------------------------------------------------------------
+
+ GRID LAYOUT (CSS GRD LAYOUT MODULE LEVEL 1 )
+
+É um sistema para criação de layout baseado em uma grade bidimensional e otimizado para design de interfaces de usuários. Nesse modelo de grade, os elementos filhos dos contêiner que defina a grade podem ser posicionados livremente em espaços criados nas estruturas, quer ela seja definida com suas dimensões flexíveis ou fixas.
+
+ANATOMIA DE UM GRID 
 
 
+grid contêiner = caixa que vai conter vários itens 
+
+grid itens = item de grade ( cada uma das intercessões )
+
+grid track = vários itens na mesma linha que vai do inicio da linhada grade ate o final tanto horizontal quanto vertical 
+
+row track = linha horizontal
+
+column track = linha vertical
 
 
+grid lines = as linhas verticais e horizontais entre os elementos que delimitam as colunas e elas são numeradas ( essa numeração pode ser inversa de forma negativa ex onde
+             era 1 fica sendo -7.
+
+grid área =  um conjunto de itens tratados como agrupamento 
+
+
+grid gap = espaço entre os itens, consegue configurar sem alterar o tamanho dos itens 
+
+
+------------------------------------------------------------------------------------------------------------
+
+Propriedades do contêiner com grid
+
+
+display: grid;
+
+grid- tamplate-columns: auto auto auto; automaticamente o grid é divido em 3 colunas 
+
+grid-tamplate-rows: 100px 100px 100px; tamanho da linha 
+
+gap: 20px; espaço entre os itens 
 
 
 
